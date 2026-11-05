@@ -1,0 +1,31 @@
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+
+# Playwright output
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+.playwright/
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Authenticated browser state produced by qa-skills (Access notes' sources)
+.qa/.auth/
+
+# Self-hosted fallback: local checkout, data, logs, and overrides
+fallback/.upstream/
+fallback/data/
+fallback/logs/
+fallback/*.log
+fallback/.env
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*.log
