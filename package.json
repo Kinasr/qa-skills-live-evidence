@@ -1,0 +1,11 @@
+{
+  "name": "qa-skills-live-evidence",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Live-evidence test project for the qa-skills plugin.",
+  "scripts": {
+    "fallback:start": "bash scripts/fallback-start.sh",
+    "fallback:reset": "bash scripts/fallback-reset.sh",
+    "fallback:stop": "bash scripts/fallback-stop.sh"
+  }
+}

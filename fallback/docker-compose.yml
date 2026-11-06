@@ -1,0 +1,93 @@
+# Self-hosted fallback for the live-evidence test project.
+#
+# Application: Practice Software Testing (Toolshop), Sprint 5, app version 5.0.
+# Upstream: https://github.com/testsmith-io/practice-software-testing
+#
+# Every image is pinned by digest (and by version tag where upstream publishes
+# one). Do not replace a digest with a moving tag such as "latest".
+#
+# Local endpoints:
+#   UI            http://localhost:4200
+#   REST API      http://localhost:8091
+#   Swagger       http://localhost:8091/api/documentation
+#
+# Start/reset with: npm run fallback:start / npm run fallback:reset
+
+name: qa-live-evidence-fallback
+
+services:
+  mariadb:
+    image: yobasystems/alpine-mariadb:10.6.11@sha256:8bb25ca2d68c81118fcf745959560de2f316a178abf9decc8bb5b6f86c929084
+    # Local-only container-network defaults from the upstream compose; they are
+    # not real credentials and are not reachable from outside the stack.
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: user
+      MYSQL_PASSWORD: root
+      MYSQL_DATABASE: toolshop
+    expose:
+      - "3306"
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -proot --silent"]
+      interval: 5s
+      timeout: 5s
+      retries: 30
+    restart: unless-stopped
+
+  laravel-api:
+    image: testsmith/practice-software-testing-sprint5-api:2.5@sha256:881cb7ecd76477994728648c0c16f6e9d2beed0f0217734843a32a7bb92553f0
+    environment:
+      PHP_OPCACHE_VALIDATE_TIMESTAMPS: "1"
+      DB_PORT: "3306"
+      DB_HOST: mariadb
+      host: localhost
+      DISABLE_LOGGING: "false"
+    volumes:
+      - laravel-app-code:/var/www
+    depends_on:
+      mariadb:
+        condition: service_healthy
+    restart: unless-stopped
+
+  angular-ui:
+    image: testsmith/practice-software-testing-sprint5-ui:2.5@sha256:f907d8daae32dc90ba900e964928d00bf0aabfab7067eaeeaa49f5a0f70c52e6
+    ports:
+      - "4200:4200"
+    depends_on:
+      - laravel-api
+    command: >
+      bash -c "ng serve --host 0.0.0.0 --port 4200"
+    restart: unless-stopped
+
+  web:
+    image: testsmith/practice-software-testing-web@sha256:950bafdc86501002c381e35d9b70e298fe211f4ab1fbfda334b67f03dffa048d
+    ports:
+      - "8091:80"
+    depends_on:
+      - laravel-api
+    restart: unless-stopped
+
+  cron:
+    image: testsmith/practice-software-testing-cron@sha256:2e0d51bd3f92c1eb2d2b21439982c8c8785bcbfa0c0fb27698f83e785337110f
+    environment:
+      PHP_OPCACHE_VALIDATE_TIMESTAMPS: "1"
+      DB_PORT: "3306"
+      DB_HOST: mariadb
+      host: localhost
+      DISABLE_LOGGING: "false"
+    volumes:
+      - laravel-app-code:/var/www
+    working_dir: /var/www
+    command: sh -c "crond -f -l 8"
+    depends_on:
+      mariadb:
+        condition: service_healthy
+      laravel-api:
+        condition: service_started
+    restart: unless-stopped
+
+volumes:
+  laravel-app-code:
+  mariadb-data:
