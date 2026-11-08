@@ -6,6 +6,16 @@
   "scripts": {
     "fallback:start": "bash scripts/fallback-start.sh",
     "fallback:reset": "bash scripts/fallback-reset.sh",
-    "fallback:stop": "bash scripts/fallback-stop.sh"
+    "fallback:stop": "bash scripts/fallback-stop.sh",
+    "test": "playwright test",
+    "test:api": "playwright test --project=api",
+    "test:ui": "playwright test --project=ui",
+    "typecheck": "tsc"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@types/node": "^26.6.6",
+    "dotenv": "^18.0.9",
+    "typescript": "^7.0.2"
   }
 }
