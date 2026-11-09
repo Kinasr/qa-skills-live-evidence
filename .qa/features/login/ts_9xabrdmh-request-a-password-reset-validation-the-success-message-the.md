@@ -34,7 +34,7 @@ The request with no email address is rejected: the email address is required. Th
 
 ```yaml
 key: tc_8tqwxf5a
-automatable: true
+automatable: false
 roles: [User]
 covers: [rule_r84e, rule_15wq, rule_vhta]
 relies_on: [rule_4c8m, rule_mbsv]
