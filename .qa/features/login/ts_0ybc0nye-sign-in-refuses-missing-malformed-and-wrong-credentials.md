@@ -14,6 +14,7 @@ key: tc_kkvq91bq
 automatable: true
 roles: [User]
 covers: [rule_das7]
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: 976c583abc4751ac}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 
@@ -39,6 +40,7 @@ key: tc_mkefzd55
 automatable: true
 roles: [User]
 covers: [rule_etgj]
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: 2ffd85b870ab36a3}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 
@@ -62,6 +64,7 @@ automatable: true
 roles: [User]
 covers: [rule_4c8m]
 relies_on: [rule_mbsv]
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: 652fbea38dfdd5e3}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 
