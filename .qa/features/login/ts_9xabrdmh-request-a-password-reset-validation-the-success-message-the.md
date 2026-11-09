@@ -38,7 +38,7 @@ automatable: false
 roles: [User]
 covers: [rule_r84e, rule_15wq, rule_vhta]
 relies_on: [rule_4c8m, rule_mbsv]
-review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: 3913ea296b42ef09}
+review: {by: human:kinasr, at: 2026-11-09, commit: db40a716c34d00c046478e9e261ed3b402084e3a, digest: 4e5d9ca78b7bb2f8}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 
