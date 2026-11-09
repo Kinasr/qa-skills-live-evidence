@@ -11,6 +11,7 @@ generated: {by: script:qa-design, at: 2026-11-08}
 
 ```yaml
 key: tc_kkvq91bq
+automates: [aut_0t1d34]
 automatable: true
 roles: [User]
 covers: [rule_das7]
@@ -60,6 +61,7 @@ The submission is rejected with a message about the email address, and the user 
 
 ```yaml
 key: tc_8y3scbfb
+automates: [aut_h6179m]
 automatable: true
 roles: [User]
 covers: [rule_4c8m]

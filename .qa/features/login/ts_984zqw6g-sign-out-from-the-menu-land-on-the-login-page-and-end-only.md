@@ -11,6 +11,7 @@ generated: {by: script:qa-design, at: 2026-11-08}
 
 ```yaml
 key: tc_d1xhm43c
+automates: [aut_t434ff]
 automatable: true
 roles: [User]
 covers: [rule_b558, rule_ej7w]
@@ -35,6 +36,7 @@ Sign-out is offered in the menu under the user's name and succeeds. The user lan
 
 ```yaml
 key: tc_amxer00w
+automates: [aut_gyg8d1]
 automatable: true
 level: api
 covers: [rule_5zdm]
@@ -55,6 +57,7 @@ Both sign-out requests are refused as unauthorised. Neither succeeds.
 
 ```yaml
 key: tc_9v4sdn5v
+automates: [aut_v0v7t4]
 automatable: true
 roles: [User]
 covers: [rule_pmxr, rule_fvmj]
