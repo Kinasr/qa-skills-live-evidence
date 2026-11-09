@@ -5,7 +5,7 @@ export const UI_URL = process.env.TOOLSHOP_UI_URL ?? 'http://localhost:4200';
 export const API_URL = process.env.TOOLSHOP_API_URL ?? 'http://localhost:8091';
 
 export default defineConfig({
-  testDir: './tests',
+  testDir: '.',
   fullyParallel: true,
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,

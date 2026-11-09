@@ -3,7 +3,7 @@ type: project
 key: project
 schema_version: 5
 stack: {language: typescript, framework: playwright, levels: [api, ui], root: .}
-annotation_map: {automation_key: [ID]}
+annotation_map: {automation_key: [tag]}
 module_paths: [tests]
 roles: [Admin, User]
 tags: {e2e: "Drives a whole user journey end to end through the UI", smoke: "A critical path a release cannot ship without", regression: "Guards behaviour that already worked against breaking again"}

@@ -11,8 +11,10 @@ generated: {by: script:qa-design, at: 2026-11-08}
 
 ```yaml
 key: tc_1z0vkyhm
+automates: [aut_yrzcdm]
 automatable: true
 covers: [rule_f2an, rule_4mm1, rule_9gc6, rule_j405]
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: fe38e3f95a3d47fb}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 
@@ -42,10 +44,12 @@ Before the control is used, the typed password is masked. After the first use of
 
 ```yaml
 key: tc_37z32vw9
+automates: [aut_ftgt8x]
 automatable: true
 roles: [User]
 covers: [rule_pq5a]
 relies_on: [rule_mbsv]
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: 79e2c1159bcc685f}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 

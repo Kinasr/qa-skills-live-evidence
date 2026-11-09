@@ -11,9 +11,11 @@ generated: {by: script:qa-design, at: 2026-11-08}
 
 ```yaml
 key: tc_d1xhm43c
+automates: [aut_t434ff]
 automatable: true
 roles: [User]
 covers: [rule_b558, rule_ej7w]
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: d458bf5c03607b7a}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 
@@ -34,9 +36,11 @@ Sign-out is offered in the menu under the user's name and succeeds. The user lan
 
 ```yaml
 key: tc_amxer00w
+automates: [aut_gyg8d1]
 automatable: true
 level: api
 covers: [rule_5zdm]
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: c2015abd98652b93}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 
@@ -53,9 +57,11 @@ Both sign-out requests are refused as unauthorised. Neither succeeds.
 
 ```yaml
 key: tc_9v4sdn5v
+automates: [aut_v0v7t4]
 automatable: true
 roles: [User]
 covers: [rule_pmxr, rule_fvmj]
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: f54297d0ccedc0ab}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 
