@@ -1,0 +1,12 @@
+# Auth template: written by the CLI from train/access.md. Do not edit it by hand.
+# Copy this file to `.qa/auth` in the main checkout and fill in each value. `.qa/auth` is git-ignored.
+# Lines are KEY=value, read literally: no quotes, and an empty value counts as missing.
+
+# acc_local-admin (Role Admin, user admin@practicesoftwaretesting.com): password; from: The seeded demo accounts listed in the upstream practice-software-testing README
+LOCAL_ADMIN_PASSWORD=
+
+# acc_local-observe (no Role, user customer2@practicesoftwaretesting.com): password; from: The seeded demo accounts listed in the upstream practice-software-testing README
+LOCAL_OBSERVE_PASSWORD=
+
+# acc_local-user (Role User, user customer@practicesoftwaretesting.com): password; from: The seeded demo accounts listed in the upstream practice-software-testing README
+LOCAL_USER_PASSWORD=
