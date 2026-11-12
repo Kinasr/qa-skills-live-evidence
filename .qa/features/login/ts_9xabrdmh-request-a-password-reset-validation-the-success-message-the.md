@@ -14,7 +14,7 @@ key: tc_38cdgs0y
 automates: [aut_434y82]
 automatable: true
 covers: [rule_7z2b, rule_gp4k]
-review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: 097c3af9db98dc04}
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: 097c3af9db98dc04, migrated: 6}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 
@@ -39,7 +39,7 @@ automatable: false
 roles: [User]
 covers: [rule_r84e, rule_15wq, rule_vhta]
 relies_on: [rule_4c8m, rule_mbsv]
-review: {by: human:kinasr, at: 2026-11-09, commit: db40a716c34d00c046478e9e261ed3b402084e3a, digest: 4e5d9ca78b7bb2f8}
+review: {by: human:kinasr, at: 2026-11-09, commit: db40a716c34d00c046478e9e261ed3b402084e3a, digest: 4e5d9ca78b7bb2f8, migrated: 6}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 
@@ -66,7 +66,7 @@ key: tc_80qdetpy
 automatable: true
 covers: [rule_k2tk]
 relies_on: [rule_15wq]
-review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: f798e042e0199dd5}
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: f798e042e0199dd5, migrated: 6}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 
@@ -93,7 +93,7 @@ automates: [aut_e7yhjy]
 automatable: true
 covers: [rule_kg1z]
 relies_on: [rule_mbsv]
-review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: 557f0124de9e8128}
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: 557f0124de9e8128, migrated: 6}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 

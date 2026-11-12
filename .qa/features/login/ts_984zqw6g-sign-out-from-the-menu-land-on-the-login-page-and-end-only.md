@@ -15,7 +15,7 @@ automates: [aut_t434ff]
 automatable: true
 roles: [User]
 covers: [rule_b558, rule_ej7w]
-review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: d458bf5c03607b7a}
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: d458bf5c03607b7a, migrated: 6}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 
@@ -40,7 +40,7 @@ automates: [aut_gyg8d1]
 automatable: true
 level: api
 covers: [rule_5zdm]
-review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: c2015abd98652b93}
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: c2015abd98652b93, migrated: 6}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 
@@ -61,7 +61,7 @@ automates: [aut_v0v7t4]
 automatable: true
 roles: [User]
 covers: [rule_pmxr, rule_fvmj]
-review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: f54297d0ccedc0ab}
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: f54297d0ccedc0ab, migrated: 6}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 

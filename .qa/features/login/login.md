@@ -2,7 +2,7 @@
 type: feature
 key: login
 suite_key: su_1wkw5maw
-coverage_digest: dfed83db917818ad
+coverage_digest: 1527be0d836c2dda
 generated: {by: human:kinasr, at: 2026-11-08}
 sources: [file:.qa/observations/2026-11-07-login-form-fields-labels-validation-error-messages.md, file:.qa/observations/2026-11-07-forgot-password-form-fields-labels-placeholders.md, file:.qa/observations/2026-11-07-entries-signed-user-menu-navigation-bar-including.md, url:http://localhost:8091/docs?api-docs.json, human:kinasr]
 ---
@@ -22,70 +22,70 @@ sign-in are left for a later run.
 
 ## Rules
 
-### rule_mbsv: A registered user who submits their correct email and password is signed in.
+1. **rule_mbsv**: A registered user who submits their correct email and password is signed in.
 
-### rule_w48w: After signing in, a User lands on their account overview ("My account").
+2. **rule_w48w**: After signing in, a User lands on their account overview ("My account").
 
-### rule_fzyk: After signing in, an Admin lands on the admin dashboard.
+3. **rule_fzyk**: After signing in, an Admin lands on the admin dashboard.
 
-### rule_das7: Sign-in requires both an email address and a password.
+4. **rule_das7**: Sign-in requires both an email address and a password.
 
-### rule_etgj: Sign-in rejects a malformed email address with a message.
+5. **rule_etgj**: Sign-in rejects a malformed email address with a message.
 
-### rule_4c8m: A wrong password and an unknown email get the same generic error, so sign-in never reveals which emails are registered.
+6. **rule_4c8m**: A wrong password and an unknown email get the same generic error, so sign-in never reveals which emails are registered.
 
-### rule_ccj1: A successful sign-in returns an access token, its type (Bearer) and its lifetime.
+7. **rule_ccj1**: A successful sign-in returns an access token, its type (Bearer) and its lifetime.
 
-This Rule is about the API contract itself: the `access_token`, `token_type` and `expires_in`
-fields of the `POST /users/login` response.
+   This Rule is about the API contract itself: the `access_token`, `token_type` and `expires_in`
+   fields of the `POST /users/login` response.
 
-### rule_7z2b: Requesting a password reset requires an email address.
+8. **rule_7z2b**: Requesting a password reset requires an email address.
 
-### rule_gp4k: Requesting a password reset rejects a malformed email address with a message.
+9. **rule_gp4k**: Requesting a password reset rejects a malformed email address with a message.
 
-### rule_r84e: Requesting a password reset for a registered email sets that account's password to `welcome02`, so the old password no longer signs in.
+10. **rule_r84e**: Requesting a password reset for a registered email sets that account's password to `welcome02`, so the old password no longer signs in.
 
-### rule_15wq: After requesting a password reset, the user is shown a success message.
+11. **rule_15wq**: After requesting a password reset, the user is shown a success message.
 
-### rule_vhta: Requesting a password reset sends no email.
+12. **rule_vhta**: Requesting a password reset sends no email.
 
-### rule_k2tk: Requesting a password reset for an unregistered email shows the same success message as for a registered one.
+13. **rule_k2tk**: Requesting a password reset for an unregistered email shows the same success message as for a registered one.
 
-### rule_kg1z: A signed-in user can open the password reset page.
+14. **rule_kg1z**: A signed-in user can open the password reset page.
 
-### rule_b558: A signed-in user can sign out from the menu under their name.
+15. **rule_b558**: A signed-in user can sign out from the menu under their name.
 
-### rule_ej7w: After signing out, the user lands on the login page.
+16. **rule_ej7w**: After signing out, the user lands on the login page.
 
-### rule_5zdm: Signing out without a valid token is refused as unauthorised.
+17. **rule_5zdm**: Signing out without a valid token is refused as unauthorised.
 
-### rule_pmxr: After signing out, the token used to sign out is no longer accepted.
+18. **rule_pmxr**: After signing out, the token used to sign out is no longer accepted.
 
-### rule_fvmj: Signing out ends only the current session; the user's other sessions stay signed in.
+19. **rule_fvmj**: Signing out ends only the current session; the user's other sessions stay signed in.
 
-### rule_f2an: The password is masked by default on the login page.
+20. **rule_f2an**: The password is masked by default on the login page.
 
-### rule_4mm1: The login page's show/hide control switches the password between masked and visible.
+21. **rule_4mm1**: The login page's show/hide control switches the password between masked and visible.
 
-### rule_9gc6: The login page offers a link to register an account.
+22. **rule_9gc6**: The login page offers a link to register an account.
 
-### rule_j405: The login page offers a link to reset a forgotten password.
+23. **rule_j405**: The login page offers a link to reset a forgotten password.
 
-### rule_pq5a: A signed-in user who visits the login page still sees the login form.
+24. **rule_pq5a**: A signed-in user who visits the login page still sees the login form.
 
 ## Boundaries
 
-### boundary_rrdh: Registering a new account is not part of this Feature; only the login page's link to registration is.
-Owner: none
+1. **boundary_rrdh**: Registering a new account is not part of this Feature; only the login page's link to registration is.
+   Owner: none
 
-### boundary_0wx9: Changing a password from the account (current password to new password) is not part of this Feature.
-Owner: none
+2. **boundary_0wx9**: Changing a password from the account (current password to new password) is not part of this Feature.
+   Owner: none
 
-### boundary_wjp7: Setting up TOTP for an account is not part of this Feature.
-Owner: none
+3. **boundary_wjp7**: Setting up TOTP for an account is not part of this Feature.
+   Owner: none
 
-### boundary_pbft: The signed-in user's profile and account page is not part of this Feature; only landing on it after sign-in is.
-Owner: none
+4. **boundary_pbft**: The signed-in user's profile and account page is not part of this Feature; only landing on it after sign-in is.
+   Owner: none
 
 ## Coverage
 

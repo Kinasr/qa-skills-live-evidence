@@ -15,7 +15,7 @@ automatable: true
 roles: [User]
 covers: [rule_mbsv, rule_w48w]
 tags: [smoke]
-review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: 309fd80dcf273855}
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: 309fd80dcf273855, migrated: 6}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 
@@ -41,7 +41,7 @@ automatable: true
 roles: [Admin]
 covers: [rule_mbsv, rule_fzyk]
 tags: [smoke]
-review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: 71a3749d665a36d8}
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: 71a3749d665a36d8, migrated: 6}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 
@@ -67,7 +67,7 @@ automatable: true
 level: api
 roles: [User]
 covers: [rule_ccj1, rule_mbsv]
-review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: 289a68fd3319d58c}
+review: {by: human:kinasr, at: 2026-11-09, commit: 729f9facd305b6b0ce24ddfe4d302c6c18767f0c, digest: 289a68fd3319d58c, migrated: 6}
 generated: {by: delegate:sonnet, at: 2026-11-08}
 ```
 

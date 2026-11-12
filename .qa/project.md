@@ -1,7 +1,7 @@
 ---
 type: project
 key: project
-schema_version: 5
+schema_version: 6
 stack: {language: typescript, framework: playwright, levels: [api, ui], root: .}
 annotation_map: {automation_key: [tag]}
 module_paths: [tests]
