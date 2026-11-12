@@ -11,8 +11,10 @@ concurrency_cap: 4
 tiers: {deep: opus, standard: sonnet, light: haiku}
 targets: {local-ui: "http://localhost:4200", local-api: "http://localhost:8091", public-ui: "https://practicesoftwaretesting.com", public-api: "https://api.practicesoftwaretesting.com"}
 execute_levels: {api: api, ui: browser}
-test_runner: {tool: playwright, dir: ., target_env: []}
+level_targets: {api: local-api, ui: local-ui}
+test_runner: {tool: playwright, dir: ., target_env: [TOOLSHOP_UI_URL, TOOLSHOP_API_URL]}
 code_host: {tool: gh}
+commit_mode: ask
 ---
 
 # Project
