@@ -66,3 +66,28 @@ the plan, with the Card relayed, and then the engineer's "yes".
   is removed and e-mail addresses are redacted. The verdict was computed from the unredacted capture.
 - `grade.txt`: the probe's printed row or INCONCLUSIVE line.
 - `headless-result.json`: the `claude -p` result.
+
+## Formal reruns with the fixed probe (#987)
+
+The two items left Pending were run again on the same install and host, with the workshop probe at
+`c22468f` (`main` after #987). This time the probe ran in its `--installed` terminal profile, which
+launches without `--plugin-dir`, so no hand-corrected Surface was needed. These directories hold
+only the probe's `capture-public.json` (tool calls and results, e-mail redacted), its state, its
+prompt and the saved evidence files. The placement inventories themselves are not committed.
+
+| Directory | Condition | Verdict |
+| --- | --- | --- |
+| [`guard-denial-formal`](guard-denial-formal/) | the Tester guard denying a call outside its allow-lists | PASS |
+| [`artifact-placement-formal`](artifact-placement-formal/) | real browser-artifact placement under the Execution directory | FAIL ([#985](https://github.com/Kinasr/qa-skills-workshop/issues/985)) |
+
+- **Guard denial:** the probe injected no calls. The guard denied the sibling's command through a
+  linked plugin root, and denied the own Tester's ordinary artifact Read and report Write through
+  planted links. Execution records: own [`p87gcfhy`](../../.qa/executions/2026-11-13-p87gcfhy.md),
+  sibling [`d2g9x9dj`](../../.qa/executions/2026-11-13-d2g9x9dj.md).
+- **Placement:** 18 new files appeared outside the Execution directory. Four are Chromium profile
+  writes in `$TMPDIR/playwright_chromiumdev_profile-*` (`BrowserMetrics-spare.pma`,
+  `extensions_crx_cache/metadata.json`), which is the #985 behaviour. The other 14 are Gradle and
+  Kotlin daemon files and sqlite-jdbc libraries from an unrelated build that was running at the
+  same time. The grader counts them because it attributes every new file to playwright-cli. The
+  Chromium files make the FAIL stand on their own. Execution record:
+  [`mxdkw77n`](../../.qa/executions/2026-11-13-mxdkw77n.md).

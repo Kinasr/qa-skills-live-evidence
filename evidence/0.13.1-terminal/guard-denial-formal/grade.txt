@@ -1,0 +1,5 @@
+state: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-jmDzfF/state.json
+| qa-skills revision | Claude Code | Surface | OS | Condition | Outcome | Date | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.13.1 @ b550c9c | 2.1.308 | terminal CLI (local marketplace, distinct name) | macOS 27.2.1 | the Tester guard denying a call outside its allow-lists | PASS | 2026-11-13 | TODO: link |
+guard-denial: PASS: the Tester guard denied the sibling's command through a linked plugin root, and the own Tester's artifact Read and report Write through planted links

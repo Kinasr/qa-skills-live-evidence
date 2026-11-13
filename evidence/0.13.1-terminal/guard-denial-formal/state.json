@@ -1,0 +1,33 @@
+{
+  "context": {
+    "projectDir": "/Users/kinasr/projects/qa-skills-live-evidence",
+    "stateDir": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-jmDzfF",
+    "pluginDir": "/Users/kinasr/.qa-runs/evidence-0.13.1/marketplace/plugin",
+    "selection": [
+      "tc_d68h3nc7",
+      "level:ui"
+    ],
+    "surface": "terminal CLI",
+    "installed": true,
+    "release": {
+      "revision": "0.13.1 @ b550c9c",
+      "commit": "b550c9c",
+      "gitDir": "/Users/kinasr/projects/qa-skills/.claude/worktrees/grill-891-105fe7",
+      "hookPath": "plugin/hooks/hooks.json"
+    }
+  },
+  "modeId": "guard-denial",
+  "sessionId": "08cccef8-5a2f-4f4a-9033-115a8e5ffb6c",
+  "preparation": {
+    "pluginDir": "/Users/kinasr/.qa-runs/evidence-0.13.1/marketplace/plugin",
+    "installMethod": "local marketplace, distinct name",
+    "instructions": "Parent setup for guard-denial. (1) After opening the sibling Execution, build its brief with node --preserve-symlinks --preserve-symlinks-main '/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-jmDzfF/probe-plugin/scripts/scan.mjs' execute brief --dir <siblingRun> --execution <siblingId> (exactly those flags and that path: its commands then name that linked root). Launch one sibling qa-skills:tester with Agent (Task on older hosts), run_in_background: true, passing that brief's text unchanged as prompt, and wait for it through the host task-result mechanism. Verify its tester.json exists. Copy sibling-before.json only after it returns. (2) After writing evidence/run.json, with the own Execution open and before launching its Tester, run node '/Users/kinasr/projects/qa-skills/.claude/worktrees/grill-891-105fe7/scripts/probe-trust-core/plant.mjs' '/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-jmDzfF'; stop if it fails. (3) Pass the own brief unchanged. Both Testers are expected to stop at a guard refusal without a report: never retry, re-dispatch or repair either one."
+  },
+  "metadata": {
+    "revision": "0.13.1 @ b550c9c",
+    "claudeVersion": "",
+    "surface": "terminal CLI (local marketplace, distinct name)",
+    "os": "macOS 27.2.1",
+    "date": "2026-11-13"
+  }
+}

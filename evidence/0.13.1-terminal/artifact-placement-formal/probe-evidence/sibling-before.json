@@ -1,0 +1,31 @@
+{
+  "id": "ex_1",
+  "run": "gqbkc3zq",
+  "origin": "http://localhost:4200",
+  "cap": 40,
+  "used": 0,
+  "stopped": null,
+  "sessions": [
+    {
+      "role": "-",
+      "acc": "acc_local-observe",
+      "setup": false,
+      "slug": "default",
+      "name": "gqbkc3zq-ex_1-default",
+      "kind": "browser",
+      "login_url": "http://localhost:4200/auth/login"
+    }
+  ],
+  "login_sessions": [
+    "gqbkc3zq-ex_1-default-login"
+  ],
+  "match": {
+    "-": [
+      "url:http://localhost:4200/"
+    ]
+  },
+  "uploads": {},
+  "at_login": [],
+  "log": [],
+  "redaction_exempt": []
+}
