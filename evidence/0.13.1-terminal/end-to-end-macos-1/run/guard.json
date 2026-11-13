@@ -1,0 +1,325 @@
+{
+  "id": "ex_1",
+  "run": "xb8rw77t",
+  "origin": "http://localhost:4200",
+  "cap": 40,
+  "used": 13,
+  "stopped": null,
+  "sessions": [
+    {
+      "role": "-",
+      "acc": "acc_local-observe",
+      "setup": false,
+      "slug": "default",
+      "name": "xb8rw77t-ex_1-default",
+      "kind": "browser",
+      "login_url": "http://localhost:4200/auth/login"
+    }
+  ],
+  "login_sessions": [
+    "xb8rw77t-ex_1-default-login"
+  ],
+  "match": {
+    "-": [
+      "url:http://localhost:4200/"
+    ]
+  },
+  "uploads": {},
+  "at_login": [],
+  "log": [
+    {
+      "n": 1,
+      "role": "-",
+      "cmd": "goto",
+      "args": [
+        "/"
+      ],
+      "status": "ok",
+      "page_url": "http://localhost:4200/"
+    },
+    {
+      "n": 2,
+      "role": "-",
+      "cmd": "snapshot",
+      "args": [],
+      "status": "ok",
+      "page_url": "http://localhost:4200/"
+    },
+    {
+      "n": 3,
+      "role": "-",
+      "cmd": "goto",
+      "args": [
+        "/checkout"
+      ],
+      "status": "ok",
+      "page_url": "http://localhost:4200/checkout"
+    },
+    {
+      "n": 4,
+      "role": "-",
+      "cmd": "snapshot",
+      "args": [],
+      "status": "ok",
+      "page_url": "http://localhost:4200/checkout"
+    },
+    {
+      "n": 5,
+      "role": "-",
+      "cmd": "goto",
+      "args": [
+        "/product/01M7AJH1DSCGTGCNDM68DMJWXC"
+      ],
+      "status": "ok",
+      "page_url": "http://localhost:4200/product/01M7AJH1DSCGTGCNDM68DMJWXC"
+    },
+    {
+      "n": 6,
+      "role": "-",
+      "cmd": "snapshot",
+      "args": [],
+      "status": "ok",
+      "page_url": "http://localhost:4200/product/01M7AJH1DSCGTGCNDM68DMJWXC"
+    },
+    {
+      "n": 7,
+      "role": "-",
+      "cmd": "fill",
+      "args": [
+        "f3e97",
+        "<typed>"
+      ],
+      "status": "ok",
+      "evidence": {
+        "aria": "spinbutton \"Quantity\"",
+        "locator": "locator('[data-test=\"quantity\"]')",
+        "excerpt": {
+          "element": {
+            "tag": "input",
+            "attributes": {
+              "aria-labelledby": "Quantity",
+              "class": "form-control ng-untouched ng-pristine ng-valid",
+              "data-test": "quantity",
+              "id": "quantity-input",
+              "type": "number"
+            }
+          },
+          "ancestors": [
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "input-group quantity"
+              }
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "col-md-6"
+              }
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "row my-3"
+              }
+            },
+            {
+              "tag": "app-detail",
+              "attributes": {}
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "container"
+              }
+            },
+            {
+              "tag": "app-root",
+              "attributes": {}
+            },
+            {
+              "tag": "body",
+              "attributes": {}
+            }
+          ]
+        }
+      },
+      "page_url": "http://localhost:4200/product/01M7AJH1DSCGTGCNDM68DMJWXC"
+    },
+    {
+      "n": 8,
+      "role": "-",
+      "cmd": "screenshot",
+      "args": [],
+      "status": "ok",
+      "page_url": "http://localhost:4200/product/01M7AJH1DSCGTGCNDM68DMJWXC",
+      "screenshot": ".playwright-cli/page-2026-11-13T14-22-04-175Z.png",
+      "session": "xb8rw77t-ex_1-default"
+    },
+    {
+      "n": 9,
+      "role": "-",
+      "cmd": "click",
+      "args": [
+        "f3e103"
+      ],
+      "status": "ok",
+      "evidence": {
+        "aria": "button",
+        "locator": "locator('[data-test=\"add-to-cart\"]')",
+        "excerpt": {
+          "element": {
+            "tag": "button",
+            "attributes": {
+              "class": "btn-success btn",
+              "data-test": "add-to-cart",
+              "id": "btn-add-to-cart"
+            }
+          },
+          "ancestors": [
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "btn-group mt-2"
+              }
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "col-md-6"
+              }
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "row my-3"
+              }
+            },
+            {
+              "tag": "app-detail",
+              "attributes": {}
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "container"
+              }
+            },
+            {
+              "tag": "app-root",
+              "attributes": {}
+            },
+            {
+              "tag": "body",
+              "attributes": {}
+            }
+          ]
+        }
+      },
+      "page_url": "http://localhost:4200/product/01M7AJH1DSCGTGCNDM68DMJWXC"
+    },
+    {
+      "n": 10,
+      "role": "-",
+      "cmd": "screenshot",
+      "args": [],
+      "status": "ok",
+      "page_url": "http://localhost:4200/product/01M7AJH1DSCGTGCNDM68DMJWXC",
+      "screenshot": ".playwright-cli/page-2026-11-13T14-22-12-340Z.png",
+      "session": "xb8rw77t-ex_1-default"
+    },
+    {
+      "n": 11,
+      "role": "-",
+      "cmd": "click",
+      "args": [
+        "f3e162"
+      ],
+      "status": "ok",
+      "evidence": {
+        "aria": "navigation > menubar \"Main menu\" > menuitem > link \"cart\"",
+        "locator": "locator('[data-test=\"nav-cart\"]')",
+        "excerpt": {
+          "element": {
+            "tag": "a",
+            "attributes": {
+              "aria-label": "cart",
+              "class": "nav-link",
+              "data-test": "nav-cart",
+              "href": "/checkout"
+            }
+          },
+          "ancestors": [
+            {
+              "tag": "li",
+              "attributes": {
+                "class": "nav-item",
+                "role": "menuitem"
+              }
+            },
+            {
+              "tag": "ul",
+              "attributes": {
+                "aria-label": "Main menu",
+                "class": "navbar-nav ms-auto mb-2 mb-lg-0",
+                "role": "menubar"
+              }
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "collapse navbar-collapse",
+                "id": "navbarSupportedContent"
+              }
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "container"
+              }
+            },
+            {
+              "tag": "nav",
+              "attributes": {
+                "class": "navbar navbar-expand-lg navbar-light bg-light"
+              }
+            },
+            {
+              "tag": "app-header",
+              "attributes": {}
+            },
+            {
+              "tag": "app-root",
+              "attributes": {}
+            },
+            {
+              "tag": "body",
+              "attributes": {}
+            }
+          ]
+        }
+      },
+      "page_url": "http://localhost:4200/checkout"
+    },
+    {
+      "n": 12,
+      "role": "-",
+      "cmd": "screenshot",
+      "args": [],
+      "status": "ok",
+      "page_url": "http://localhost:4200/checkout",
+      "screenshot": ".playwright-cli/page-2026-11-13T14-22-21-524Z.png",
+      "session": "xb8rw77t-ex_1-default"
+    },
+    {
+      "n": 13,
+      "role": "-",
+      "cmd": "console",
+      "args": [],
+      "status": "ok",
+      "page_url": "http://localhost:4200/checkout"
+    }
+  ],
+  "redaction_exempt": [],
+  "closed": true
+}

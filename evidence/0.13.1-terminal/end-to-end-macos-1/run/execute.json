@@ -1,0 +1,59 @@
+{
+  "root": "/Users/kinasr/projects/qa-skills-live-evidence/.qa",
+  "confirmed": true,
+  "run": "xb8rw77t",
+  "target": {
+    "slug": "local-ui",
+    "origin": "http://localhost:4200"
+  },
+  "created_at": "2026-11-13T14:19:56.307Z",
+  "playwright_cli": "0.1.22",
+  "commit": "0861a60c9a55493ee95db5386e102588cdd3053e",
+  "tester": {
+    "tier": "standard",
+    "label": "sonnet"
+  },
+  "concurrency_cap": 4,
+  "executions": [
+    {
+      "id": "ex_1",
+      "key": "tc_d68h3nc7",
+      "summary": "Adding a product from its product page with a chosen quantity puts it in the cart at that quantity and shows a confirmation message",
+      "feature": "cart",
+      "text": "### tc_d68h3nc7: Adding a product from its product page with a chosen quantity puts it in the cart at that quantity and shows a confirmation message\n\n```yaml\nkey: tc_d68h3nc7\nautomatable: true\ncovers: [rule_0qkc, rule_cf41]\ngenerated: {by: delegate:sonnet, at: \"2026-11-13\"}\n```\n\n**Preconditions.**\n\n- An empty cart in the current browser session\n- An in-stock product with a product page\n\n**Steps.**\n\n1. Open the product page of the in-stock product.\n2. Choose a quantity of 2.\n3. Add the product to the cart.\n4. Open the cart.\n\n**Expected result.**\n\nA confirmation message is shown when the product is added (its wording is not checked). The cart contains the product as a single line at quantity 2.",
+      "level": "ui",
+      "bound_levels": [],
+      "selected_levels": [
+        "ui"
+      ],
+      "omitted_levels": [],
+      "mode": "browser",
+      "digest": "b3dff40ba0f2f720",
+      "dirty": false,
+      "review": "fresh",
+      "stale": false,
+      "roles": [],
+      "access": [
+        "acc_local-observe"
+      ],
+      "sessions": [
+        {
+          "role": "-",
+          "acc": "acc_local-observe",
+          "setup": false
+        }
+      ],
+      "cap": 40
+    }
+  ],
+  "skipped": [],
+  "selection": {
+    "scope": [
+      "tc_d68h3nc7"
+    ],
+    "tags": [],
+    "levels": [
+      "ui"
+    ]
+  }
+}
