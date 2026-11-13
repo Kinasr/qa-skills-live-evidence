@@ -11,6 +11,7 @@ generated: {by: script:qa-design, at: 2026-11-13}
 
 ```yaml
 key: tc_pqyf26fg
+automates: [aut_4fn721]
 automatable: true
 covers: [rule_tywa]
 review: {by: human:kinasr, at: 2026-11-13, commit: 390c6440d4ef9b3d5dc5f796db6da87b17e36f7b, digest: 769019fb943c3fc1}
@@ -37,6 +38,7 @@ The visitor can add the product, and it appears in the cart. The quantity change
 
 ```yaml
 key: tc_afg65s72
+automates: [aut_714tas]
 automatable: true
 roles: [User]
 covers: [rule_tywa]

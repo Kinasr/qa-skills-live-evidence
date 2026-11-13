@@ -37,6 +37,7 @@ A confirmation message is shown when the product is added (its wording is not ch
 
 ```yaml
 key: tc_wvs3mkze
+automates: [aut_kbz1m8]
 automatable: true
 covers: [rule_6j0p]
 relies_on: [rule_0qkc]

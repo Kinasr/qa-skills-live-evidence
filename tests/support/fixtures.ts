@@ -2,6 +2,8 @@ import { test as base, request as playwrightRequest } from '@playwright/test';
 import { API_URL } from '../../playwright.config';
 import { account, type Credentials, type Role } from './accounts';
 import { UsersApi } from './api/users-api';
+import { CartsApi } from './api/carts-api';
+import { ProductsApi } from './api/products-api';
 import { ForgotPasswordPage } from './pages/forgot-password-page';
 import { LoginPage } from './pages/login-page';
 import { NavBar } from './pages/nav-bar';
@@ -15,6 +17,8 @@ export interface MockResponse {
 
 interface Fixtures {
   usersApi: UsersApi;
+  cartsApi: CartsApi;
+  productsApi: ProductsApi;
   dedicatedUser: Credentials;
   /** Signs in through the API and stores the token where the UI reads it; later navigations see the session. */
   signInAs: (role: Role) => Promise<void>;
@@ -36,6 +40,24 @@ export const test = base.extend<Fixtures>({
       extraHTTPHeaders: { Accept: 'application/json' },
     });
     await use(new UsersApi(context));
+    await context.dispose();
+  },
+
+  cartsApi: async ({}, use) => {
+    const context = await playwrightRequest.newContext({
+      baseURL: API_URL,
+      extraHTTPHeaders: { Accept: 'application/json' },
+    });
+    await use(new CartsApi(context));
+    await context.dispose();
+  },
+
+  productsApi: async ({}, use) => {
+    const context = await playwrightRequest.newContext({
+      baseURL: API_URL,
+      extraHTTPHeaders: { Accept: 'application/json' },
+    });
+    await use(new ProductsApi(context));
     await context.dispose();
   },
 
