@@ -1,0 +1,159 @@
+{
+  "note": "Publishable extract of capture.json: tool calls and results only, e-mail addresses redacted. The verdict was graded from the full capture.",
+  "readErrors": [],
+  "files": {
+    "detection-agent.txt": "claude-code_2-1-321_agent\n",
+    "detection-execpath.txt": "/Users/kinasr/Library/Application Support/Claude/claude-code/2.1.321/ddbdf2b334e1/claude.app/Contents/MacOS/claude\n",
+    "detection-plan.json": "{\n  \"mode\": \"execute\",\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-7cLmef\",\n  \"executions\": 1,\n  \"skipped\": [],\n  \"warnings\": [],\n  \"text\": \"Execute 1 case against local-ui (http://localhost:4200).\\nSelection: tc_d68h3nc7 level:ui\\nLevels:\\n  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\\nRoles → Access notes:\\n  (no Role) → acc_local-observe\\nData handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.13.1/docs/support.md#data-handling\\nRun dir: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-7cLmef\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-7cLmef'\"\n}\n",
+    "detection-version.json": "{\"exit\":0,\"stdout\":\"2.1.321 (Claude Code)\\n\",\"stderr\":\"\"}\n"
+  },
+  "parent": [
+    {
+      "use": "toolu_015FJgcn7B6Nf4SWwC8pzW7G",
+      "tool": "mcp__ccd_turn__update_plan",
+      "input": {
+        "items": [
+          {
+            "content": "Record CLAUDE_CODE_EXECPATH",
+            "status": "in_progress"
+          },
+          {
+            "content": "Record execpath --version JSON",
+            "status": "pending"
+          },
+          {
+            "content": "Record AI_AGENT",
+            "status": "pending"
+          },
+          {
+            "content": "Run execute plan and save JSON",
+            "status": "pending"
+          }
+        ],
+        "scope": "first_task"
+      }
+    },
+    {
+      "result": "toolu_015FJgcn7B6Nf4SWwC8pzW7G",
+      "is_error": false,
+      "content": "[{\"type\":\"text\",\"text\":\"Plan shown (4 steps).\"}]"
+    },
+    {
+      "use": "toolu_01LpaoqCTLHwjUG9cQhnTL2n",
+      "tool": "Bash",
+      "input": {
+        "command": "printenv CLAUDE_CODE_EXECPATH",
+        "description": "Print CLAUDE_CODE_EXECPATH"
+      }
+    },
+    {
+      "use": "toolu_01BAh4EWdtEduZ4fb8dmpwPi",
+      "tool": "Bash",
+      "input": {
+        "command": "node -e 'const p=process.env.CLAUDE_CODE_EXECPATH;const r=p&&require(\"node:path\").isAbsolute(p)?require(\"node:child_process\").spawnSync(p,[\"--version\"],{encoding:\"utf8\"}):{status:null,stdout:\"\",stderr:\"CLAUDE_CODE_EXECPATH is unset or not absolute\"};console.log(JSON.stringify({exit:r.status,stdout:r.stdout??\"\",stderr:r.stderr??\"\"}))'",
+        "description": "Run Claude executable version check as JSON"
+      }
+    },
+    {
+      "use": "toolu_01LaP7xVoUXv5GLDBpCitKkh",
+      "tool": "Bash",
+      "input": {
+        "command": "printenv AI_AGENT",
+        "description": "Print AI_AGENT"
+      }
+    },
+    {
+      "result": "toolu_01LpaoqCTLHwjUG9cQhnTL2n",
+      "is_error": false,
+      "content": "/Users/kinasr/Library/Application Support/Claude/claude-code/2.1.321/ddbdf2b334e1/claude.app/Contents/MacOS/claude"
+    },
+    {
+      "result": "toolu_01BAh4EWdtEduZ4fb8dmpwPi",
+      "is_error": false,
+      "content": "{\"exit\":0,\"stdout\":\"2.1.321 (Claude Code)\\n\",\"stderr\":\"\"}"
+    },
+    {
+      "result": "toolu_01LaP7xVoUXv5GLDBpCitKkh",
+      "is_error": false,
+      "content": "claude-code_2-1-321_agent"
+    },
+    {
+      "use": "toolu_01JoL5BDmnPE5cojJ6yDoCtV",
+      "tool": "Bash",
+      "input": {
+        "command": "node '/Users/kinasr/.claude/plugins/cache/qa-skills-local/qa-skills/0.13.1/scripts/scan.mjs' execute plan 'tc_d68h3nc7' 'level:ui'",
+        "description": "Run qa-skills execute plan for the case"
+      }
+    },
+    {
+      "result": "toolu_01JoL5BDmnPE5cojJ6yDoCtV",
+      "is_error": false,
+      "content": "{\n  \"mode\": \"execute\",\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-7cLmef\",\n  \"executions\": 1,\n  \"skipped\": [],\n  \"warnings\": [],\n  \"text\": \"Execute 1 case against local-ui (http://localhost:4200).\\nSelection: tc_d68h3nc7 level:ui\\nLevels:\\n  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\\nRoles → Access notes:\\n  (no Role) → acc_local-observe\\nData handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.13.1/docs/support.md#data-handling\\nRun dir: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-7cLmef\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-7cLmef'\"\n}"
+    },
+    {
+      "use": "toolu_011Fw7NAbR3qFSrtbj3pXMzx",
+      "tool": "Write",
+      "input": {
+        "file_path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-UT8I1t/evidence/detection-execpath.txt",
+        "content": "/Users/kinasr/Library/Application Support/Claude/claude-code/2.1.321/ddbdf2b334e1/claude.app/Contents/MacOS/claude\n"
+      }
+    },
+    {
+      "use": "toolu_01Jm2XdwKwBbuLrUNskH5Nyc",
+      "tool": "Write",
+      "input": {
+        "file_path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-UT8I1t/evidence/detection-version.json",
+        "content": "{\"exit\":0,\"stdout\":\"2.1.321 (Claude Code)\\n\",\"stderr\":\"\"}\n"
+      }
+    },
+    {
+      "use": "toolu_01LbHXcaXfd68RYkoqqPhNGc",
+      "tool": "Write",
+      "input": {
+        "file_path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-UT8I1t/evidence/detection-agent.txt",
+        "content": "claude-code_2-1-321_agent\n"
+      }
+    },
+    {
+      "use": "toolu_01Ct7sdg6P881RgKrj4vMgrT",
+      "tool": "Write",
+      "input": {
+        "file_path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-UT8I1t/evidence/detection-plan.json",
+        "content": "{\n  \"mode\": \"execute\",\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-7cLmef\",\n  \"executions\": 1,\n  \"skipped\": [],\n  \"warnings\": [],\n  \"text\": \"Execute 1 case against local-ui (http://localhost:4200).\\nSelection: tc_d68h3nc7 level:ui\\nLevels:\\n  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\\nRoles → Access notes:\\n  (no Role) → acc_local-observe\\nData handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.13.1/docs/support.md#data-handling\\nRun dir: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-7cLmef\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-7cLmef'\"\n}\n"
+      }
+    },
+    {
+      "use": "toolu_01EwBy4h8bj68v5QpRM7Wm3z",
+      "tool": "mcp__ccd_turn__wrap_up",
+      "input": {
+        "recap": "All four detection observations are saved under the probe evidence folder. The plan succeeded with no Unguarded Run offer, and the run was stopped after the plan as instructed: nothing was confirmed, opened, briefed, launched or ingested."
+      }
+    },
+    {
+      "result": "toolu_011Fw7NAbR3qFSrtbj3pXMzx",
+      "is_error": false,
+      "content": "File created successfully at: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-UT8I1t/evidence/detection-execpath.txt (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "result": "toolu_01Jm2XdwKwBbuLrUNskH5Nyc",
+      "is_error": false,
+      "content": "File created successfully at: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-UT8I1t/evidence/detection-version.json (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "result": "toolu_01LbHXcaXfd68RYkoqqPhNGc",
+      "is_error": false,
+      "content": "File created successfully at: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-UT8I1t/evidence/detection-agent.txt (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "result": "toolu_01Ct7sdg6P881RgKrj4vMgrT",
+      "is_error": false,
+      "content": "File created successfully at: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-UT8I1t/evidence/detection-plan.json (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "result": "toolu_01EwBy4h8bj68v5QpRM7Wm3z",
+      "is_error": false,
+      "content": "[{\"type\":\"text\",\"text\":\"Nothing is pending, so the app draws no box; the recap is the session's status. Your closing message is your answer to the user: write it now, as the last thing you say this turn.\"}]"
+    }
+  ],
+  "children": {}
+}

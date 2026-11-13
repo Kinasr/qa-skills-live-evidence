@@ -1,0 +1,31 @@
+{
+  "id": "ex_1",
+  "run": "kapbcgnp",
+  "origin": "http://localhost:4200",
+  "cap": 40,
+  "used": 0,
+  "stopped": null,
+  "sessions": [
+    {
+      "role": "-",
+      "acc": "acc_local-observe",
+      "setup": false,
+      "slug": "default",
+      "name": "kapbcgnp-ex_1-default",
+      "kind": "browser",
+      "login_url": "http://localhost:4200/auth/login"
+    }
+  ],
+  "login_sessions": [
+    "kapbcgnp-ex_1-default-login"
+  ],
+  "match": {
+    "-": [
+      "url:http://localhost:4200/"
+    ]
+  },
+  "uploads": {},
+  "at_login": [],
+  "log": [],
+  "redaction_exempt": []
+}

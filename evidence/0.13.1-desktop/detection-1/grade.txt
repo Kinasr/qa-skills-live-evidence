@@ -1,0 +1,4 @@
+| qa-skills revision | Claude Code | Surface | OS | Condition | Outcome | Date | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.13.1 @ b550c9c | 2.1.321 | desktop app (local marketplace, distinct name) | macOS 27.2.1 | host-version detection working on the floor version | PASS | 2026-11-13 | TODO: link |
+detection: PASS: host-version detection worked above the floor 2.1.308: CLAUDE_CODE_EXECPATH "/Users/kinasr/Library/Application Support/Claude/claude-code/2.1.321/ddbdf2b334e1/claude.app/Contents/MacOS/claude" (absolute); --version answer "2.1.321 (Claude Code)"; AI_AGENT "claude-code_2-1-321_agent"; route guarded admission

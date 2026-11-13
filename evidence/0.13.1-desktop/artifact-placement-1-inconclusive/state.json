@@ -1,0 +1,33 @@
+{
+  "context": {
+    "projectDir": "/Users/kinasr/projects/qa-skills-live-evidence",
+    "stateDir": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-bRY1RF",
+    "pluginDir": "/Users/kinasr/.qa-runs/evidence-0.13.1/marketplace/plugin",
+    "selection": [
+      "tc_d68h3nc7",
+      "level:ui"
+    ],
+    "surface": "desktop app",
+    "installed": true,
+    "release": {
+      "revision": "0.13.1 @ b550c9c",
+      "commit": "b550c9c",
+      "gitDir": "/Users/kinasr/projects/qa-skills/.claude/worktrees/agitated-gauss-ee138e",
+      "hookPath": "plugin/hooks/hooks.json"
+    }
+  },
+  "modeId": "artifact-placement",
+  "sessionId": "4f09dfd0-3105-4863-9fee-cefbb64c1345",
+  "preparation": {
+    "pluginDir": "/Users/kinasr/.qa-runs/evidence-0.13.1/marketplace/plugin",
+    "installMethod": "local marketplace, distinct name",
+    "instructions": "Parent setup for artifact-placement: after writing evidence/run.json with the real binding paths, after the own Execution is open and before launching its Tester, run node '/Users/kinasr/projects/qa-skills/.claude/worktrees/agitated-gauss-ee138e/scripts/probe-trust-core/inventory.mjs' '/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-bRY1RF' 'artifacts-before.txt'. This inventories ownRun, siblingRun and projectDir, plus the OS temp directory and the user's home directory (including .playwright-cli and similar dot directories). bounded inventory: temp/home depth 4; pruned probe state, .git, large caches (Library, .cache, .npm, host state including .claude except browser/playwright dirs, macOS com.apple.* temp dirs, node_modules); symlinks and unreadable dirs, deeper paths, modified existing files, transient files and other roots are blind spots. After the own Tester returns and before execute ingest, run node '/Users/kinasr/projects/qa-skills/.claude/worktrees/agitated-gauss-ee138e/scripts/probe-trust-core/inventory.mjs' '/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-bRY1RF' 'artifacts-after.txt'. Each call saves the full inventory itself and prints only its path count and SHA-256; do not redirect, tee or print the saved file. Do not delete, move or edit any file, and keep run.json's ownRun and ownId exactly as the brief's binding marker states."
+  },
+  "metadata": {
+    "revision": "0.13.1 @ b550c9c",
+    "claudeVersion": "",
+    "surface": "desktop app (local marketplace, distinct name)",
+    "os": "macOS 27.2.1",
+    "date": "2026-11-13"
+  }
+}

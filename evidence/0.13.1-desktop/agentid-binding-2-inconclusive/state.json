@@ -1,0 +1,33 @@
+{
+  "context": {
+    "projectDir": "/Users/kinasr/projects/qa-skills-live-evidence",
+    "stateDir": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-voVAW6",
+    "pluginDir": "/Users/kinasr/.qa-runs/evidence-0.13.1/marketplace/plugin",
+    "selection": [
+      "tc_d68h3nc7",
+      "level:ui"
+    ],
+    "surface": "desktop app",
+    "installed": true,
+    "release": {
+      "revision": "0.13.1 @ b550c9c",
+      "commit": "b550c9c",
+      "gitDir": "/Users/kinasr/projects/qa-skills/.claude/worktrees/agitated-gauss-ee138e",
+      "hookPath": "plugin/hooks/hooks.json"
+    }
+  },
+  "modeId": "agentid-binding",
+  "sessionId": "dde65d00-e657-4a4b-be30-036dbcdceac0",
+  "preparation": {
+    "pluginDir": "/Users/kinasr/.qa-runs/evidence-0.13.1/marketplace/plugin",
+    "installMethod": "local marketplace, distinct name",
+    "instructions": "Parent setup for agentid-binding: after opening the sibling and before the own launch, run execute brief for the sibling. Keep its first binding-marker line, then insert a control instruction to return SIBLING_READY without tools or case actions. Launch this sibling qa-skills:tester with run_in_background: true and wait for its completion through the host task-result mechanism. Verify its tester.json exists; after the own launch, verify the two agent_id values differ. Copy sibling-before.json only after this control launch and binding have completed; then leave the sibling idle while the own Tester runs."
+  },
+  "metadata": {
+    "revision": "0.13.1 @ b550c9c",
+    "claudeVersion": "",
+    "surface": "desktop app (local marketplace, distinct name)",
+    "os": "macOS 27.2.1",
+    "date": "2026-11-13"
+  }
+}

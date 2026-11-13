@@ -1,0 +1,2 @@
+INCONCLUSIVE (rerun, not counted): the Tester guard denying a call outside its allow-lists: background Tester launch, binding or guard capture unavailable
+guard-denial: INCONCLUSIVE: background Tester launch, binding or guard capture unavailable

@@ -1,0 +1,2 @@
+INCONCLUSIVE (rerun, not counted): a background-launched Tester binding to its Execution (`agentId`): own admission and sibling refusal were not both captured with the real trace
+agentid-binding: INCONCLUSIVE: own admission and sibling refusal were not both captured with the real trace
