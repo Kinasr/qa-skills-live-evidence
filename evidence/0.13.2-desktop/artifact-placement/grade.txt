@@ -1,0 +1,4 @@
+| qa-skills revision | Claude Code | Surface | OS | Condition | Outcome | Date | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.13.2 @ e8822f0 | 2.1.321 | desktop app (local marketplace, distinct name) | macOS 27.2.1 | real browser-artifact placement under the Execution directory, confirmed with the real CLI | PASS | 2026-11-13 | TODO: link |
+artifact-placement: PASS: all 103 observed files lie under /private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-a2zMyl/executions/ex_1 or the idle sibling's /private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-JeTX6W/executions/ex_1; 100 artifact files: /private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-a2zMyl/executions/ex_1/.element-snapshot.json, /private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-a2zMyl/executions/ex_1/.playwright-cli/console-2026-11-13T22-53-03-346Z.log, /private/var/folders/1f/1165

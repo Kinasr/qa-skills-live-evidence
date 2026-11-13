@@ -1,0 +1,2 @@
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.13.2 @ e8822f0 | 2.1.308 | terminal CLI (local marketplace, distinct name) | macOS 27.2.1 | real browser-artifact placement under the Execution directory, confirmed with the real CLI | FAIL | 2026-11-13 | TODO: link |

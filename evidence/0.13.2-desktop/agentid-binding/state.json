@@ -1,0 +1,33 @@
+{
+  "context": {
+    "projectDir": "/Users/kinasr/projects/qa-skills-live-evidence",
+    "stateDir": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-ShUkWO",
+    "pluginDir": "/Users/kinasr/.qa-runs/evidence-0.13.2/marketplace/plugin",
+    "selection": [
+      "tc_d68h3nc7",
+      "level:ui"
+    ],
+    "surface": "desktop app",
+    "installed": true,
+    "release": {
+      "revision": "0.13.2 @ e8822f0",
+      "commit": "e8822f0",
+      "gitDir": "/Users/kinasr/projects/qa-skills/.claude/worktrees/peaceful-swirles-13ec1c",
+      "hookPath": "plugin/hooks/hooks.json"
+    }
+  },
+  "modeId": "agentid-binding",
+  "sessionId": "fbc8626c-e28b-4e79-9aff-58599b9e31e9",
+  "preparation": {
+    "pluginDir": "/Users/kinasr/.qa-runs/evidence-0.13.2/marketplace/plugin",
+    "installMethod": "local marketplace, distinct name",
+    "instructions": "Parent setup for agentid-binding. (1) After opening the sibling and before the own launch, run execute brief for the sibling. Keep its first binding-marker line, then insert a control instruction to return SIBLING_READY without tools or case actions. Launch this sibling qa-skills:tester with run_in_background: true and wait for its completion through the host task-result mechanism. Verify its tester.json exists. Copy sibling-before.json only after this control launch and binding have completed; then leave the sibling idle. (2) After writing evidence/run.json, with both Executions open, run node '/Users/kinasr/projects/qa-skills/.claude/worktrees/peaceful-swirles-13ec1c/scripts/probe-trust-core/intruder.mjs' '/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-ShUkWO' brief; stop if it fails. It saves evidence/intruder-brief.md: the own brief's binding line followed by the sibling's CLI-built brief, unchanged. Launch one intruder qa-skills:tester with Agent (Task on older hosts), run_in_background: true, passing that file's text unchanged as prompt. As soon as the launch returns, run node '/Users/kinasr/projects/qa-skills/.claude/worktrees/peaceful-swirles-13ec1c/scripts/probe-trust-core/intruder.mjs' '/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-ShUkWO' bound; stop if it fails. Then wait for the intruder through the host task-result mechanism. It is expected to stop at a guard refusal without a report: never retry, re-dispatch or repair it. (3) Only then launch the own Tester; its launch rebinds the own Execution. After it, verify the own and sibling tester.json agent_id values differ."
+  },
+  "metadata": {
+    "revision": "0.13.2 @ e8822f0",
+    "claudeVersion": "",
+    "surface": "desktop app (local marketplace, distinct name)",
+    "os": "macOS 27.2.1",
+    "date": "2026-11-13"
+  }
+}

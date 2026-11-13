@@ -1,0 +1,1 @@
+INCONCLUSIVE (rerun, not counted): a background-launched Tester binding to its Execution (`agentId`): the intruder Tester's background launch on the own binding line, with the saved intruder brief, its binding or transcript was not captured
