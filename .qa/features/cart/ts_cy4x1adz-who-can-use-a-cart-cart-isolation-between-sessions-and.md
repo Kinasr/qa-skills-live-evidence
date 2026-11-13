@@ -13,6 +13,7 @@ generated: {by: script:qa-design, at: 2026-11-13}
 key: tc_pqyf26fg
 automatable: true
 covers: [rule_tywa]
+review: {by: human:kinasr, at: 2026-11-13, commit: 390c6440d4ef9b3d5dc5f796db6da87b17e36f7b, digest: 769019fb943c3fc1}
 generated: {by: delegate:sonnet, at: 2026-11-13}
 ```
 
@@ -39,6 +40,7 @@ key: tc_afg65s72
 automatable: true
 roles: [User]
 covers: [rule_tywa]
+review: {by: human:kinasr, at: 2026-11-13, commit: 390c6440d4ef9b3d5dc5f796db6da87b17e36f7b, digest: d653adb249aa8e00}
 generated: {by: delegate:sonnet, at: 2026-11-13}
 ```
 
@@ -67,6 +69,7 @@ level: ui
 roles: [User]
 covers: [rule_zngd]
 relies_on: [rule_tywa]
+review: {by: human:kinasr, at: 2026-11-13, commit: 390c6440d4ef9b3d5dc5f796db6da87b17e36f7b, digest: a6ddde519dcea5f9}
 generated: {by: delegate:sonnet, at: 2026-11-13}
 ```
 
@@ -120,6 +123,7 @@ key: tc_9qh7edff
 automatable: true
 covers: [rule_w5a8]
 relies_on: [rule_tywa]
+review: {by: human:kinasr, at: 2026-11-13, commit: 390c6440d4ef9b3d5dc5f796db6da87b17e36f7b, digest: 432663b5ec492071}
 generated: {by: delegate:sonnet, at: 2026-11-13}
 ```
 

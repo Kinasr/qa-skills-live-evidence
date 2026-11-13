@@ -13,6 +13,7 @@ generated: {by: script:qa-design, at: 2026-11-13}
 key: tc_d68h3nc7
 automatable: true
 covers: [rule_0qkc, rule_cf41]
+review: {by: human:kinasr, at: 2026-11-13, commit: 390c6440d4ef9b3d5dc5f796db6da87b17e36f7b, digest: b3dff40ba0f2f720}
 generated: {by: delegate:sonnet, at: 2026-11-13}
 ```
 
@@ -39,6 +40,7 @@ key: tc_wvs3mkze
 automatable: true
 covers: [rule_6j0p]
 relies_on: [rule_0qkc]
+review: {by: human:kinasr, at: 2026-11-13, commit: 390c6440d4ef9b3d5dc5f796db6da87b17e36f7b, digest: cdb805d4b9fb1b7b}
 generated: {by: delegate:sonnet, at: 2026-11-13}
 ```
 
@@ -63,6 +65,7 @@ The cart still has exactly one line for that product, and its quantity is 5 (2 p
 key: tc_az5xje7b
 automatable: true
 covers: [rule_phg8]
+review: {by: human:kinasr, at: 2026-11-13, commit: 390c6440d4ef9b3d5dc5f796db6da87b17e36f7b, digest: 3cbb78695af43181}
 generated: {by: delegate:sonnet, at: 2026-11-13}
 ```
 

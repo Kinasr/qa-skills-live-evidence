@@ -14,6 +14,7 @@ key: tc_m2p6txkz
 automatable: true
 covers: [rule_d95y, rule_qtkv]
 relies_on: [rule_0qkc]
+review: {by: human:kinasr, at: 2026-11-13, commit: 390c6440d4ef9b3d5dc5f796db6da87b17e36f7b, digest: f3790cc6c18a6ef0}
 generated: {by: delegate:sonnet, at: 2026-11-13}
 ```
 
@@ -38,6 +39,7 @@ key: tc_c0syc29v
 automatable: true
 covers: [rule_nyn1, rule_qtkv]
 relies_on: [rule_0qkc]
+review: {by: human:kinasr, at: 2026-11-13, commit: 390c6440d4ef9b3d5dc5f796db6da87b17e36f7b, digest: 081a7969a89cf5f0}
 generated: {by: delegate:sonnet, at: 2026-11-13}
 ```
 
@@ -64,6 +66,7 @@ key: tc_1738p8v7
 automatable: true
 covers: [rule_0b5b, rule_qyns]
 relies_on: [rule_0qkc, rule_qtkv]
+review: {by: human:kinasr, at: 2026-11-13, commit: 390c6440d4ef9b3d5dc5f796db6da87b17e36f7b, digest: 4c28b1aa77beb8ee}
 generated: {by: delegate:sonnet, at: 2026-11-13}
 ```
 
