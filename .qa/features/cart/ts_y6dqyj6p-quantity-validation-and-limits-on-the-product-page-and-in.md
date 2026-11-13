@@ -71,9 +71,7 @@ key: tc_t9vj3rsp
 automatable: true
 covers: [rule_0f5y]
 relies_on: [rule_0qkc, rule_nyn1, rule_d95y, rule_6j0p]
-review: {by: human:kinasr, at: 2026-11-13, commit: 390c6440d4ef9b3d5dc5f796db6da87b17e36f7b, digest: 17af716849b1c63c}
-finding:
-  - {kind: Conflict, at_commit: 689a16b1f68f4de64e3c434ea3a828db17122d40, at_digest: 40f92206ecb683df, evidence: "rule_0f5y: the case says \"No maximum quantity is enforced in either place, and the line quantity and line total reflect the quantities entered.\" but the Rule says \"the maximum is 99: a larger value on the product page or in the cart is clamped to 99.\" The case expects no maximum quantity on the product page or in the cart, but rule_0f5y sets a maximum of 99 and clamps larger values to 99 in both places."}
+review: {by: human:kinasr, at: 2026-11-13, commit: 1bc8a8380dc76ff6066bd89653a24c7ad4a4596e, digest: 48b76e2b1fcf707b}
 generated: {by: delegate:sonnet, at: 2026-11-13}
 ```
 
