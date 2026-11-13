@@ -42,7 +42,7 @@ export class CartsApi {
   }
 
   updateQuantity(cartId: string, productId: string, quantity: number, token?: string): Promise<APIResponse> {
-    return this.request.put(`/carts/${cartId}/products/quantity`, {
+    return this.request.put(`/carts/${cartId}/product/quantity`, {
       headers: this.headers(token),
       data: { product_id: productId, quantity },
     });
