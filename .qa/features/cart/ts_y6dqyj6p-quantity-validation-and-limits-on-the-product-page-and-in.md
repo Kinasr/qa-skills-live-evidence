@@ -64,14 +64,16 @@ generated: {by: delegate:sonnet, at: 2026-11-13}
 
 Every one of the four attempts is refused; no specific message is required. After each attempt, and after the reload, the line is still present at its previous quantity, and its line total and the cart total are unchanged.
 
-### tc_t9vj3rsp: Decreasing a quantity stops at 1, and a very large whole quantity is accepted on the product page and in the cart
+### tc_t9vj3rsp: Decreasing a quantity stops at 1, and a quantity above 99 ends at 99 on the product page and in the cart
 
 ```yaml
 key: tc_t9vj3rsp
 automatable: true
 covers: [rule_0f5y]
-relies_on: [rule_0qkc, rule_nyn1, rule_d95y]
+relies_on: [rule_0qkc, rule_nyn1, rule_d95y, rule_6j0p]
 review: {by: human:kinasr, at: 2026-11-13, commit: 390c6440d4ef9b3d5dc5f796db6da87b17e36f7b, digest: 17af716849b1c63c}
+finding:
+  - {kind: Conflict, at_commit: 689a16b1f68f4de64e3c434ea3a828db17122d40, at_digest: 40f92206ecb683df, evidence: "rule_0f5y: the case says \"No maximum quantity is enforced in either place, and the line quantity and line total reflect the quantities entered.\" but the Rule says \"the maximum is 99: a larger value on the product page or in the cart is clamped to 99.\" The case expects no maximum quantity on the product page or in the cart, but rule_0f5y sets a maximum of 99 and clamps larger values to 99 in both places."}
 generated: {by: delegate:sonnet, at: 2026-11-13}
 ```
 
@@ -85,9 +87,9 @@ generated: {by: delegate:sonnet, at: 2026-11-13}
 1. Open the product's page and add it with a quantity of 1.
 2. Open the cart and check the line shows quantity 1.
 3. Try to decrease that line's quantity below 1.
-4. Set that line's quantity to a very large whole number.
-5. Open the product's page again and add it with a very large whole quantity.
+4. Set that line's quantity to a whole number above 99, such as 150, and read the line quantity and line total.
+5. Open the product's page again, add it with a whole quantity above 99, such as 150, then open the cart and read the line quantity and line total.
 
 **Expected result.**
 
-At quantity 1 the line cannot go lower and stays at 1. The very large whole quantity is accepted in the cart. Adding a very large whole quantity from the product page is also accepted. No maximum quantity is enforced in either place, and the line quantity and line total reflect the quantities entered.
+At quantity 1 the line cannot go lower and stays at 1. After setting a quantity above 99 in the cart, the cart line ends at quantity 99 with a line total of 99 × the unit price. After adding a quantity above 99 from the product page, the cart line again ends at quantity 99 with a line total of 99 × the unit price.
