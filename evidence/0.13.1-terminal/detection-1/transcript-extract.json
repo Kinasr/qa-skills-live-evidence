@@ -1,0 +1,224 @@
+{
+  "note": "Redacted extract of the probe capture: tool calls and results only; session context removed, e-mail addresses redacted. The verdict in grade.txt was computed from the unredacted capture.",
+  "readErrors": [],
+  "files": {
+    "detection-agent.txt": "claude-code_2-1-308_agent\n",
+    "detection-execpath.txt": "/Users/kinasr/.qa-runs/evidence-0.13.1/cc308/node_modules/@anthropic-ai/claude-code/bin/claude.exe\n",
+    "detection-plan.json": "{\n  \"mode\": \"execute\",\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-exEo7j\",\n  \"executions\": 1,\n  \"skipped\": [],\n  \"warnings\": [],\n  \"text\": \"Execute 1 case against local-ui (http://localhost:4200).\\nSelection: tc_d68h3nc7 level:ui\\nLevels:\\n  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\\nRoles → Access notes:\\n  (no Role) → acc_local-observe\\nData handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.13.1/docs/support.md#data-handling\\nRun dir: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-exEo7j\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-exEo7j'\"\n}\n",
+    "detection-version.json": "{\"exit\":0,\"stdout\":\"2.1.308 (Claude Code)\\n\",\"stderr\":\"\"}\n"
+  },
+  "parent": [
+    {
+      "at": "2026-11-13T13:46:51.257Z",
+      "use": "toolu_01PHLjbbkk6D1kpzcdfnRyck",
+      "tool": "Bash",
+      "input": {
+        "command": "printenv CLAUDE_CODE_EXECPATH",
+        "description": "Read CLAUDE_CODE_EXECPATH"
+      }
+    },
+    {
+      "at": "2026-11-13T13:46:51.636Z",
+      "result": "toolu_01PHLjbbkk6D1kpzcdfnRyck",
+      "is_error": false,
+      "content": "/Users/kinasr/.qa-runs/evidence-0.13.1/cc308/node_modules/@anthropic-ai/claude-code/bin/claude.exe"
+    },
+    {
+      "at": "2026-11-13T13:46:53.255Z",
+      "use": "toolu_01GEMkKUhzgJWHDoXEuNVED3",
+      "tool": "Bash",
+      "input": {
+        "command": "node -e 'const p=process.env.CLAUDE_CODE_EXECPATH;const r=p&&require(\"node:path\").isAbsolute(p)?require(\"node:child_process\").spawnSync(p,[\"--version\"],{encoding:\"utf8\"}):{status:null,stdout:\"\",stderr:\"CLAUDE_CODE_EXECPATH is unset or not absolute\"};console.log(JSON.stringify({exit:r.status,stdout:r.stdout??\"\",stderr:r.stderr??\"\"}))'",
+        "description": "Probe host binary version"
+      }
+    },
+    {
+      "at": "2026-11-13T13:46:53.266Z",
+      "use": "toolu_0146ivZ57xSuV8ikoP7L2ZCr",
+      "tool": "Bash",
+      "input": {
+        "command": "printenv AI_AGENT",
+        "description": "Read AI_AGENT"
+      }
+    },
+    {
+      "at": "2026-11-13T13:46:53.624Z",
+      "result": "toolu_01GEMkKUhzgJWHDoXEuNVED3",
+      "is_error": false,
+      "content": "{\"exit\":0,\"stdout\":\"2.1.308 (Claude Code)\\n\",\"stderr\":\"\"}"
+    },
+    {
+      "at": "2026-11-13T13:46:53.776Z",
+      "result": "toolu_0146ivZ57xSuV8ikoP7L2ZCr",
+      "is_error": false,
+      "content": "claude-code_2-1-308_agent"
+    },
+    {
+      "use": "toolu_01PHLjbbkk6D1kpzcdfnRyck",
+      "tool": "Bash",
+      "input": {
+        "command": "printenv CLAUDE_CODE_EXECPATH",
+        "description": "Read CLAUDE_CODE_EXECPATH"
+      }
+    },
+    {
+      "use": "toolu_01GEMkKUhzgJWHDoXEuNVED3",
+      "tool": "Bash",
+      "input": {
+        "command": "node -e 'const p=process.env.CLAUDE_CODE_EXECPATH;const r=p&&require(\"node:path\").isAbsolute(p)?require(\"node:child_process\").spawnSync(p,[\"--version\"],{encoding:\"utf8\"}):{status:null,stdout:\"\",stderr:\"CLAUDE_CODE_EXECPATH is unset or not absolute\"};console.log(JSON.stringify({exit:r.status,stdout:r.stdout??\"\",stderr:r.stderr??\"\"}))'",
+        "description": "Probe host binary version"
+      }
+    },
+    {
+      "use": "toolu_0146ivZ57xSuV8ikoP7L2ZCr",
+      "tool": "Bash",
+      "input": {
+        "command": "printenv AI_AGENT",
+        "description": "Read AI_AGENT"
+      }
+    },
+    {
+      "result": "toolu_01PHLjbbkk6D1kpzcdfnRyck",
+      "is_error": false,
+      "content": "/Users/kinasr/.qa-runs/evidence-0.13.1/cc308/node_modules/@anthropic-ai/claude-code/bin/claude.exe"
+    },
+    {
+      "result": "toolu_01GEMkKUhzgJWHDoXEuNVED3",
+      "is_error": false,
+      "content": "{\"exit\":0,\"stdout\":\"2.1.308 (Claude Code)\\n\",\"stderr\":\"\"}"
+    },
+    {
+      "result": "toolu_0146ivZ57xSuV8ikoP7L2ZCr",
+      "is_error": false,
+      "content": "claude-code_2-1-308_agent"
+    },
+    {
+      "at": "2026-11-13T13:46:57.158Z",
+      "use": "toolu_01LGniPLb2YfqkfcocPCvGrk",
+      "tool": "Bash",
+      "input": {
+        "command": "node '/Users/kinasr/.qa-runs/evidence-0.13.1/marketplace/plugin/scripts/scan.mjs' execute plan 'tc_d68h3nc7' 'level:ui'",
+        "description": "Run execute plan for the case"
+      }
+    },
+    {
+      "at": "2026-11-13T13:46:58.237Z",
+      "result": "toolu_01LGniPLb2YfqkfcocPCvGrk",
+      "is_error": false,
+      "content": "{\n  \"mode\": \"execute\",\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-exEo7j\",\n  \"executions\": 1,\n  \"skipped\": [],\n  \"warnings\": [],\n  \"text\": \"Execute 1 case against local-ui (http://localhost:4200).\\nSelection: tc_d68h3nc7 level:ui\\nLevels:\\n  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\\nRoles → Access notes:\\n  (no Role) → acc_local-observe\\nData handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.13.1/docs/support.md#data-handling\\nRun dir: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-exEo7j\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-exEo7j'\"\n}"
+    },
+    {
+      "at": "2026-11-13T13:47:03.136Z",
+      "use": "toolu_01USSGJgX774Gvd4ihznGPRT",
+      "tool": "Write",
+      "input": {
+        "file_path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-execpath.txt",
+        "content": "/Users/kinasr/.qa-runs/evidence-0.13.1/cc308/node_modules/@anthropic-ai/claude-code/bin/claude.exe\n"
+      }
+    },
+    {
+      "at": "2026-11-13T13:47:03.341Z",
+      "result": "toolu_01USSGJgX774Gvd4ihznGPRT",
+      "is_error": false,
+      "content": "File created successfully at: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-execpath.txt (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "at": "2026-11-13T13:47:04.337Z",
+      "use": "toolu_018m4tBtf6PCGRDgxsgVJxqX",
+      "tool": "Write",
+      "input": {
+        "file_path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-version.json",
+        "content": "{\"exit\":0,\"stdout\":\"2.1.308 (Claude Code)\\n\",\"stderr\":\"\"}\n"
+      }
+    },
+    {
+      "at": "2026-11-13T13:47:04.548Z",
+      "result": "toolu_018m4tBtf6PCGRDgxsgVJxqX",
+      "is_error": false,
+      "content": "File created successfully at: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-version.json (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "at": "2026-11-13T13:47:05.544Z",
+      "use": "toolu_01WTdoAhmELr8EgKcYZhhWRm",
+      "tool": "Write",
+      "input": {
+        "file_path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-agent.txt",
+        "content": "claude-code_2-1-308_agent\n"
+      }
+    },
+    {
+      "at": "2026-11-13T13:47:05.732Z",
+      "result": "toolu_01WTdoAhmELr8EgKcYZhhWRm",
+      "is_error": false,
+      "content": "File created successfully at: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-agent.txt (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "at": "2026-11-13T13:47:10.064Z",
+      "use": "toolu_011HNvSGtNrZxwKdJuuiXPxn",
+      "tool": "Write",
+      "input": {
+        "file_path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-plan.json",
+        "content": "{\n  \"mode\": \"execute\",\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-exEo7j\",\n  \"executions\": 1,\n  \"skipped\": [],\n  \"warnings\": [],\n  \"text\": \"Execute 1 case against local-ui (http://localhost:4200).\\nSelection: tc_d68h3nc7 level:ui\\nLevels:\\n  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\\nRoles → Access notes:\\n  (no Role) → acc_local-observe\\nData handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.13.1/docs/support.md#data-handling\\nRun dir: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-exEo7j\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-exEo7j'\"\n}\n"
+      }
+    },
+    {
+      "at": "2026-11-13T13:47:10.270Z",
+      "result": "toolu_011HNvSGtNrZxwKdJuuiXPxn",
+      "is_error": false,
+      "content": "File created successfully at: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-plan.json (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "use": "toolu_01USSGJgX774Gvd4ihznGPRT",
+      "tool": "Write",
+      "input": {
+        "file_path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-execpath.txt",
+        "content": "/Users/kinasr/.qa-runs/evidence-0.13.1/cc308/node_modules/@anthropic-ai/claude-code/bin/claude.exe\n"
+      }
+    },
+    {
+      "use": "toolu_018m4tBtf6PCGRDgxsgVJxqX",
+      "tool": "Write",
+      "input": {
+        "file_path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-version.json",
+        "content": "{\"exit\":0,\"stdout\":\"2.1.308 (Claude Code)\\n\",\"stderr\":\"\"}\n"
+      }
+    },
+    {
+      "use": "toolu_01WTdoAhmELr8EgKcYZhhWRm",
+      "tool": "Write",
+      "input": {
+        "file_path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-agent.txt",
+        "content": "claude-code_2-1-308_agent\n"
+      }
+    },
+    {
+      "use": "toolu_011HNvSGtNrZxwKdJuuiXPxn",
+      "tool": "Write",
+      "input": {
+        "file_path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-plan.json",
+        "content": "{\n  \"mode\": \"execute\",\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-exEo7j\",\n  \"executions\": 1,\n  \"skipped\": [],\n  \"warnings\": [],\n  \"text\": \"Execute 1 case against local-ui (http://localhost:4200).\\nSelection: tc_d68h3nc7 level:ui\\nLevels:\\n  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\\nRoles → Access notes:\\n  (no Role) → acc_local-observe\\nData handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.13.1/docs/support.md#data-handling\\nRun dir: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-exEo7j\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-exEo7j'\"\n}\n"
+      }
+    },
+    {
+      "result": "toolu_01USSGJgX774Gvd4ihznGPRT",
+      "is_error": false,
+      "content": "File created successfully at: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-execpath.txt (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "result": "toolu_018m4tBtf6PCGRDgxsgVJxqX",
+      "is_error": false,
+      "content": "File created successfully at: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-version.json (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "result": "toolu_01WTdoAhmELr8EgKcYZhhWRm",
+      "is_error": false,
+      "content": "File created successfully at: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-agent.txt (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "result": "toolu_011HNvSGtNrZxwKdJuuiXPxn",
+      "is_error": false,
+      "content": "File created successfully at: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-plan.json (file state is current in your context — no need to Read it back)"
+    }
+  ],
+  "children": {}
+}

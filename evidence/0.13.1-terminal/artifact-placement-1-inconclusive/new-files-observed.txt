@@ -1,0 +1,14 @@
+/private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/playwright_chromiumdev_profile-WpyxSm/BrowserMetrics-spare.pma
+/private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/playwright_chromiumdev_profile-lSFoBZ/BrowserMetrics-spare.pma
+/private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-48wCTJ/executions/ex_1/.element-snapshot.json
+/private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-48wCTJ/executions/ex_1/.playwright-cli/console-2026-11-13T14-05-29-374Z.log
+/private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-48wCTJ/executions/ex_1/.playwright-cli/console-2026-11-13T14-05-59-617Z.log
+/private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-48wCTJ/executions/ex_1/.playwright-cli/console-2026-11-13T14-06-19-818Z.log
+/private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-48wCTJ/executions/ex_1/.playwright-cli/page-2026-11-13T14-05-29-566Z.yml
+/private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-48wCTJ/executions/ex_1/.playwright-cli/page-2026-11-13T14-05-59-882Z.yml
+/private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-48wCTJ/executions/ex_1/.playwright-cli/page-2026-11-13T14-06-19-951Z.yml
+/private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-48wCTJ/executions/ex_1/.playwright-cli/page-2026-11-13T14-06-53-082Z.png
+/private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-48wCTJ/executions/ex_1/.playwright-cli/page-2026-11-13T14-07-04-510Z.yml
+/private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-48wCTJ/executions/ex_1/.playwright-cli/page-2026-11-13T14-07-12-159Z.yml
+/private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-48wCTJ/executions/ex_1/tester.json
+/private/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-48wCTJ/executions/ex_1/tester.report.md

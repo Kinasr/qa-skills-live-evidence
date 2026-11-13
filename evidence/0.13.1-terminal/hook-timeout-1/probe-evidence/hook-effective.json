@@ -1,0 +1,21 @@
+{
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true,
+    "code-review@claude-plugins-official": true,
+    "skill-creator@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "playwright@claude-plugins-official": true,
+    "github@claude-plugins-official": false,
+    "jdtls-lsp@claude-plugins-official": true,
+    "kotlin-lsp@claude-plugins-official": true,
+    "browser-use@claude-plugins-official": true,
+    "claude-md-management@claude-plugins-official": true,
+    "claude-code-setup@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true,
+    "pr-review-toolkit@claude-plugins-official": true,
+    "chrome-devtools-mcp@claude-plugins-official": true,
+    "qa-skills@qa-skills": false,
+    "qa-skills@qa-skills-local": false,
+    "qa-skills@qa-trust-core-fault": true
+  }
+}

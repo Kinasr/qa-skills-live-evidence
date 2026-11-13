@@ -1,0 +1,34 @@
+{
+  "context": {
+    "projectDir": "/Users/kinasr/projects/qa-skills-live-evidence",
+    "stateDir": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-KGcGQj",
+    "pluginDir": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-KGcGQj/marketplace/plugin",
+    "selection": [
+      "tc_d68h3nc7",
+      "level:ui"
+    ],
+    "surface": "desktop app",
+    "release": {
+      "revision": "0.13.1 @ b550c9c",
+      "commit": "b550c9c",
+      "gitDir": "/Users/kinasr/projects/qa-skills/.claude/worktrees/grill-891-105fe7",
+      "hookPath": "plugin/hooks/hooks.json"
+    }
+  },
+  "modeId": "hook-timeout",
+  "sessionId": "7bde1b56-f529-496c-966e-f63ac06cbc45",
+  "preparation": {
+    "pluginDir": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-KGcGQj/marketplace/plugin",
+    "installMethod": "faulted copy, local marketplace",
+    "instructions": "Before launching the Tester, capture plugin state: copy /Users/kinasr/projects/qa-skills-live-evidence/.claude/settings.local.json byte-for-byte to /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-KGcGQj/evidence/hook-settings.local.json. Identify the actually loaded faulted plugin root in this session (for desktop use the installed marketplace cache, not the source directory); copy its hooks/hooks.json byte-for-byte to /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-KGcGQj/evidence/hook-active.json. Inspect the session's effective plugin settings, including user, project, local and managed settings and session overrides; verify no other qa-skills registration is enabled. Save the observed effective enabledPlugins object as JSON with an enabledPlugins field to /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-KGcGQj/evidence/hook-effective.json, recording all qa-skills registrations. If the active root or effective settings cannot be established, stop and leave the evidence missing. Copy the source files as-is; do not guess effective settings.",
+    "engineerSteps": "Before opening the desktop session, preserve the previous contents of /Users/kinasr/projects/qa-skills-live-evidence/.claude/settings.local.json (or record that the file was absent). Merge these entries into that file without removing its other settings: {\n  \"extraKnownMarketplaces\": {\n    \"qa-trust-core-fault\": {\n      \"source\": {\n        \"source\": \"directory\",\n        \"path\": \"/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-KGcGQj/marketplace\"\n      }\n    }\n  },\n  \"enabledPlugins\": {\n    \"qa-skills@qa-trust-core-fault\": true,\n    \"qa-skills@qa-skills\": false\n  }\n}. Close and restart the desktop Code session on the project, then paste the prompt below. After grading, restore the file's previous content (or remove it if it was absent) and restart the session again.",
+    "sessionSettingsEvidence": "hook-session-settings.json"
+  },
+  "metadata": {
+    "revision": "0.13.1 @ b550c9c",
+    "claudeVersion": "",
+    "surface": "desktop app (faulted copy, local marketplace)",
+    "os": "macOS 27.2.1",
+    "date": "2026-11-13"
+  }
+}

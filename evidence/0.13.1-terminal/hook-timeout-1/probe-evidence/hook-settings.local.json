@@ -1,0 +1,27 @@
+{
+  "enabledPlugins": {
+    "qa-skills@qa-skills": false,
+    "qa-skills@qa-skills-local": false,
+    "qa-skills@qa-trust-core-fault": true
+  },
+  "extraKnownMarketplaces": {
+    "qa-skills": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/kinasr/projects/qa-skills-evidence"
+      }
+    },
+    "qa-skills-local": {
+      "source": {
+        "source": "directory",
+        "path": "/Users/kinasr/.qa-runs/evidence-0.13.1/marketplace"
+      }
+    },
+    "qa-trust-core-fault": {
+      "source": {
+        "source": "directory",
+        "path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-KGcGQj/marketplace"
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "context": {
+    "projectDir": "/Users/kinasr/projects/qa-skills-live-evidence",
+    "stateDir": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS",
+    "pluginDir": "/Users/kinasr/.qa-runs/evidence-0.13.1/marketplace/plugin",
+    "selection": [
+      "tc_d68h3nc7",
+      "level:ui"
+    ],
+    "surface": "desktop app",
+    "release": {
+      "revision": "0.13.1 @ b550c9c",
+      "commit": "b550c9c",
+      "gitDir": "/Users/kinasr/projects/qa-skills/.claude/worktrees/grill-891-105fe7",
+      "hookPath": "plugin/hooks/hooks.json"
+    }
+  },
+  "modeId": "detection",
+  "sessionId": "884896df-5997-4c60-8c44-60085f6112e6",
+  "preparation": {
+    "pluginDir": "/Users/kinasr/.qa-runs/evidence-0.13.1/marketplace/plugin",
+    "installMethod": "local marketplace, distinct name",
+    "instructions": "Parent setup for detection, which overrides the lifecycle below and stops after the plan. Save these four observations from the running host under /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence before doing anything else. 1. Read the exact CLAUDE_CODE_EXECPATH value by running the standalone Bash command printenv CLAUDE_CODE_EXECPATH and save its exact result to /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-execpath.txt, or <unset> when empty. 2. Run this exact standalone Bash command: node -e 'const p=process.env.CLAUDE_CODE_EXECPATH;const r=p&&require(\"node:path\").isAbsolute(p)?require(\"node:child_process\").spawnSync(p,[\"--version\"],{encoding:\"utf8\"}):{status:null,stdout:\"\",stderr:\"CLAUDE_CODE_EXECPATH is unset or not absolute\"};console.log(JSON.stringify({exit:r.status,stdout:r.stdout??\"\",stderr:r.stderr??\"\"}))'. Save its exact JSON stdout to /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-version.json. 3. Run the standalone Bash command printenv AI_AGENT and save its exact result to /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-agent.txt, or <unset> when empty. 4. Run the standalone execute plan command named below, without redirects or other shell operations. Save its exact JSON stdout to /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-Xp54HS/evidence/detection-plan.json before acting on it. Then stop: do not confirm, open, brief, launch a Tester or ingest. An Unguarded Run offer is recorded as that offer, never accepted."
+  },
+  "metadata": {
+    "revision": "0.13.1 @ b550c9c",
+    "claudeVersion": "",
+    "surface": "desktop app (local marketplace, distinct name)",
+    "os": "macOS 27.2.1",
+    "date": "2026-11-13"
+  }
+}

@@ -1,0 +1,4 @@
+| qa-skills revision | Claude Code | Surface | OS | Condition | Outcome | Date | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.13.1 @ b550c9c | 2.1.308 | desktop app (local marketplace, distinct name) | macOS 27.2.1 | a background-launched Tester binding to its Execution (`agentId`) | PASS | 2026-11-13 | TODO: link |
+agentid-binding: PASS: background agentId matches tester.json; own snapshot admitted and sibling snapshot denied

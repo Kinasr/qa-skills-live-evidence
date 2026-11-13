@@ -1,0 +1,32 @@
+{
+  "context": {
+    "projectDir": "/Users/kinasr/projects/qa-skills-live-evidence",
+    "stateDir": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-trust-core-OPYu1j",
+    "pluginDir": "/Users/kinasr/.qa-runs/evidence-0.13.1/marketplace/plugin",
+    "selection": [
+      "tc_d68h3nc7",
+      "level:ui"
+    ],
+    "surface": "desktop app",
+    "release": {
+      "revision": "0.13.1 @ b550c9c",
+      "commit": "b550c9c",
+      "gitDir": "/Users/kinasr/projects/qa-skills/.claude/worktrees/grill-891-105fe7",
+      "hookPath": "plugin/hooks/hooks.json"
+    }
+  },
+  "modeId": "guard-denial",
+  "sessionId": "285b2927-72bc-4970-a1d7-ede516a047a5",
+  "preparation": {
+    "pluginDir": "/Users/kinasr/.qa-runs/evidence-0.13.1/marketplace/plugin",
+    "installMethod": "local marketplace, distinct name",
+    "instructions": ""
+  },
+  "metadata": {
+    "revision": "0.13.1 @ b550c9c",
+    "claudeVersion": "",
+    "surface": "desktop app (local marketplace, distinct name)",
+    "os": "macOS 27.2.1",
+    "date": "2026-11-13"
+  }
+}
