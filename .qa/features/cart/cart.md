@@ -61,6 +61,12 @@ outside it, and deleting a whole cart is left for a later run.
 
 - **Delete the whole cart**: not in this run's request. From: url:http://localhost:8091/docs?api-docs.json, DELETE /carts/{cartId}
 
+## Proposed Rules
+
+1. A quantity that is whitespace only or contains letters is refused and the cart does not change.
+   Why: rule_dc0g names non-integer and empty, but non-numeric text and whitespace are not explicitly partitioned.
+   Scenario: ts_y6dqyj6p
+
 ## Open questions
 
 1. [results] **Does a cart link with a count appear in the menu once the cart has items, and does it count lines or the sum of quantities?**: The Observation (fact 5) shows no cart link or count while the cart is empty; kinasr needs to check the badge.
