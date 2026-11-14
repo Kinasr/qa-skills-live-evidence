@@ -1,0 +1,22 @@
+{
+  "status": 200,
+  "headers": {
+    "content-type": "application/json"
+  },
+  "body": {
+    "authorized": true,
+    "origin": "http://localhost:8095",
+    "method": "GET",
+    "session_user": null,
+    "received_headers": {
+      "host": "localhost:8095",
+      "connection": "keep-alive",
+      "authorization": "<redacted>",
+      "accept": "*/*",
+      "accept-language": "*",
+      "sec-fetch-mode": "cors",
+      "user-agent": "node",
+      "accept-encoding": "gzip, deflate"
+    }
+  }
+}

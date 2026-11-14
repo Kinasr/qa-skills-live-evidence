@@ -10,6 +10,9 @@
 //   POST /login       sets a session cookie and redirects to /
 //   GET  /api/echo    requires `Authorization: Bearer <FIXTURE_API_TOKEN>`; echoes the request
 //                     headers it received (200 when the header matches, 401 otherwise)
+//   GET  /api/revoked always 401, as if the configured key had been revoked; echoes the same way
+// Each echo carries the headers twice: `received_headers` as an object (name -> value) and
+// `raw_headers` as "name: value" lines, so a credential is also echoed under no header-named key.
 //
 // The secrets are throwaway values read from the git-ignored Auth file `.qa/auth`
 // (FIXTURE_API_TOKEN, FIXTURE_APP_PASSWORD). This server never prints them.
@@ -95,17 +98,23 @@ async function handle(req, res, origin) {
     }
     return page(res, 401, "Sign in", `<h1>Sign in</h1><p role="alert">Wrong user name or password</p><p><a href="/login">Try again</a></p>`);
   }
-  if (url.pathname === "/api/echo") {
+  if (url.pathname === "/api/echo" || url.pathname === "/api/revoked") {
     // Echo every header received, the session cookie's value replaced by whether it named a session.
     const received = { ...req.headers };
     if (received.cookie !== undefined) received.cookie = user ? `<session of ${user}>` : "<no session>";
-    const authorized = req.headers.authorization === `Bearer ${TOKEN}`;
+    const raw = [];
+    for (let i = 0; i < req.rawHeaders.length; i += 2) {
+      const name = req.rawHeaders[i].toLowerCase();
+      raw.push(`${name}: ${name === "cookie" ? received.cookie : req.rawHeaders[i + 1]}`);
+    }
+    const authorized = url.pathname === "/api/echo" && req.headers.authorization === `Bearer ${TOKEN}`;
     return json(res, authorized ? 200 : 401, {
       authorized,
       origin,
       method: req.method,
       session_user: user,
       received_headers: received,
+      raw_headers: raw,
     });
   }
   return json(res, 404, { error: "not found", path: url.pathname });

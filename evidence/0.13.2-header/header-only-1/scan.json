@@ -1,0 +1,25 @@
+{
+  "scheme": "Bearer",
+  "secret_length": 42,
+  "scanned": [
+    {
+      "path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-4jMJD7",
+      "files": 9
+    },
+    {
+      "path": "<home>/projects/qa-skills-live-evidence/.qa/executions/2026-11-14-nkm71bt2.md",
+      "files": 1
+    },
+    {
+      "path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-4jMJD7/executions/ex_1/tester.report.md",
+      "files": 1
+    },
+    {
+      "path": "<home>/projects/qa-skills-live-evidence/evidence/0.13.2-header/header-only-1",
+      "files": 11
+    }
+  ],
+  "hits": [],
+  "leftovers": [],
+  "verdict": "CLEAN"
+}

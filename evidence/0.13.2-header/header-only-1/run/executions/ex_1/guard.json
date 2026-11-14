@@ -1,0 +1,55 @@
+{
+  "id": "ex_1",
+  "run": "nkm71bt2",
+  "origin": "http://localhost:8095",
+  "cap": 30,
+  "used": 2,
+  "stopped": null,
+  "sessions": [
+    {
+      "role": "-",
+      "acc": "acc_fixture-api",
+      "setup": false,
+      "slug": "default",
+      "name": "nkm71bt2-ex_1-default",
+      "header": true,
+      "kind": "header-only",
+      "login_url": null
+    }
+  ],
+  "login_sessions": [],
+  "match": {
+    "-": [
+      "url:http://localhost:8095/"
+    ]
+  },
+  "uploads": {},
+  "at_login": [],
+  "log": [
+    {
+      "n": 1,
+      "role": "-",
+      "cmd": "request",
+      "args": [
+        "GET",
+        "http://localhost:8095/api/echo"
+      ],
+      "status": "ok",
+      "http_status": 200
+    },
+    {
+      "n": 2,
+      "role": "-",
+      "cmd": "request",
+      "args": [
+        "GET",
+        "http://localhost:8095/api/echo"
+      ],
+      "auth": "invalid",
+      "status": "ok",
+      "http_status": 401
+    }
+  ],
+  "redaction_exempt": [],
+  "closed": true
+}

@@ -1,0 +1,59 @@
+{
+  "root": "/Users/kinasr/projects/qa-skills-live-evidence/.qa",
+  "confirmed": true,
+  "run": "nkm71bt2",
+  "target": {
+    "slug": "fixture-api",
+    "origin": "http://localhost:8095"
+  },
+  "created_at": "2026-11-14T10:12:36.316Z",
+  "playwright_cli": "0.1.22",
+  "commit": "1def5f38e7d3d4eac63e45e3db98b7a2e6b60a09",
+  "tester": {
+    "tier": "standard",
+    "label": "sonnet"
+  },
+  "concurrency_cap": 4,
+  "executions": [
+    {
+      "id": "ex_1",
+      "key": "tc_9gjc65d6",
+      "summary": "The fixture API accepts the configured credential and refuses an invalid one",
+      "feature": "header-fixture",
+      "text": "### tc_9gjc65d6: The fixture API accepts the configured credential and refuses an invalid one\n\n```yaml\nkey: tc_9gjc65d6\nautomatable: true\ncovers: [rule_h7k2, rule_m4q9]\ngenerated: {by: human:kinasr, at: \"2026-11-14\"}\n```\n\n**Steps.**\n\n1. Send GET `/api/echo` with the default credential\n2. Read the response status, its `authorized` field and the `authorization` header it lists under `received_headers`\n3. Send GET `/api/echo` with an invalid credential\n4. Read the response status and its `authorized` field\n\n**Expected result.**\n\nThe first call is answered 200 with `authorized: true`, and `received_headers` lists an\n`authorization` header. The call with an invalid credential is answered 401 with\n`authorized: false`.",
+      "level": "api",
+      "bound_levels": [],
+      "selected_levels": [
+        "api"
+      ],
+      "omitted_levels": [],
+      "mode": "api",
+      "digest": "822eac51d15b03fd",
+      "dirty": false,
+      "review": "none",
+      "stale": false,
+      "roles": [],
+      "access": [
+        "acc_fixture-api"
+      ],
+      "sessions": [
+        {
+          "role": "-",
+          "acc": "acc_fixture-api",
+          "setup": false
+        }
+      ],
+      "cap": 30
+    }
+  ],
+  "skipped": [],
+  "selection": {
+    "scope": [
+      "tc_9gjc65d6"
+    ],
+    "tags": [],
+    "levels": [
+      "api"
+    ]
+  }
+}
