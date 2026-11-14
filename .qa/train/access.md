@@ -11,7 +11,7 @@ key: access
 match: ["url:http://localhost:4200/"]
 via: auth:LOCAL_ADMIN_PASSWORD
 role: Admin
-identifiers: {user: admin@practicesoftwaretesting.com, login_url: "http://localhost:4200/auth/login"}
+identifiers: {user: admin@practicesoftwaretesting.com, login_url: "http://localhost:4200/auth/login", sign_in_urls: ["http://localhost:8091/users/login"]}
 credential_from: "The seeded demo accounts listed in the upstream practice-software-testing README"
 sources: [human:kinasr]
 added: 2026-11-13
@@ -25,7 +25,7 @@ A single form takes email and password on /auth/login. The API at http://localho
 match: ["url:http://localhost:4200/"]
 via: auth:LOCAL_USER_PASSWORD
 role: User
-identifiers: {user: customer@practicesoftwaretesting.com, login_url: "http://localhost:4200/auth/login"}
+identifiers: {user: customer@practicesoftwaretesting.com, login_url: "http://localhost:4200/auth/login", sign_in_urls: ["http://localhost:8091/users/login"]}
 credential_from: "The seeded demo accounts listed in the upstream practice-software-testing README"
 sources: [human:kinasr]
 added: 2026-11-13
@@ -38,7 +38,7 @@ A single form takes email and password on /auth/login. The API's Bearer token co
 ```yaml
 match: ["url:http://localhost:4200/"]
 via: auth:LOCAL_OBSERVE_PASSWORD
-identifiers: {user: customer2@practicesoftwaretesting.com, login_url: "http://localhost:4200/auth/login"}
+identifiers: {user: customer2@practicesoftwaretesting.com, login_url: "http://localhost:4200/auth/login", sign_in_urls: ["http://localhost:8091/users/login"]}
 credential_from: "The seeded demo accounts listed in the upstream practice-software-testing README"
 sources: [human:kinasr]
 added: 2026-11-13
