@@ -115,6 +115,9 @@ async function handle(req, res, origin) {
       session_user: user,
       received_headers: received,
       raw_headers: raw,
+      // The Authorization value as received, and without its first word, under a key that names no
+      // credential: an API that echoes the key back in an ordinary field.
+      echoed: req.headers.authorization === undefined ? [] : [req.headers.authorization, req.headers.authorization.replace(/^\S+\s+/, "")],
     });
   }
   return json(res, 404, { error: "not found", path: url.pathname });

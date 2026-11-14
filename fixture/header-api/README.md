@@ -16,7 +16,10 @@ npm run fixture:start    # serves http://localhost:8095 (API origin) and http://
 
 Each echo carries the headers twice: `received_headers` (name to value) and `raw_headers`
 (`"name: value"` lines), so a credential is also echoed under no header-named key and the literal
-`<credential>` mask is visible where key-named redaction would otherwise replace it.
+`<credential>` mask is visible where key-named redaction would otherwise replace it. `echoed`
+lists the `Authorization` value as received and the same value without its scheme, under a key
+that names no credential, as an API that echoes a key back in an ordinary field would: there the
+CLI's literal mask, not the key-name or `Bearer` pattern scrub, is what hides the secret.
 
 ## Secrets
 

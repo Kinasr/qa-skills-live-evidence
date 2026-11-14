@@ -1,0 +1,49 @@
+{
+  "cap": 4,
+  "chain": [
+    "sonnet",
+    "inherit"
+  ],
+  "active": 0,
+  "stopped": null,
+  "seq": 1,
+  "breakers": {
+    "sonnet": {
+      "streak": 0,
+      "tripped": null
+    },
+    "inherit": {
+      "streak": 0,
+      "tripped": null
+    }
+  },
+  "trips": [],
+  "units": [
+    {
+      "id": "ex_1",
+      "status": "done",
+      "seq": 0,
+      "not_before": 0,
+      "budget": {
+        "delegate": 0,
+        "used": 1
+      },
+      "attempts": [
+        {
+          "n": 1,
+          "local": 1,
+          "delegate": 0,
+          "ts": 1794651603187,
+          "status": "ok",
+          "error_kind": null,
+          "usable": true,
+          "settled": 1794651691039
+        }
+      ]
+    }
+  ],
+  "locks": {},
+  "paused": [],
+  "retried": [],
+  "skipped": []
+}

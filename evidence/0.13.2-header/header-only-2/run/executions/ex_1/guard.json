@@ -1,0 +1,67 @@
+{
+  "id": "ex_1",
+  "run": "p37k17qm",
+  "origin": "http://localhost:8095",
+  "cap": 40,
+  "used": 3,
+  "stopped": null,
+  "sessions": [
+    {
+      "role": "-",
+      "acc": "acc_fixture-api",
+      "setup": false,
+      "slug": "default",
+      "name": "p37k17qm-ex_1-default",
+      "header": true,
+      "kind": "header-only",
+      "login_url": null
+    }
+  ],
+  "login_sessions": [],
+  "match": {
+    "-": [
+      "url:http://localhost:8095/"
+    ]
+  },
+  "uploads": {},
+  "at_login": [],
+  "log": [
+    {
+      "n": 1,
+      "role": "-",
+      "cmd": "request",
+      "args": [
+        "GET",
+        "http://localhost:8095/api/echo"
+      ],
+      "status": "ok",
+      "http_status": 200
+    },
+    {
+      "n": 2,
+      "role": "-",
+      "cmd": "request",
+      "args": [
+        "GET",
+        "http://localhost:8095/api/echo"
+      ],
+      "auth": "invalid",
+      "status": "ok",
+      "http_status": 401
+    },
+    {
+      "n": 3,
+      "role": "-",
+      "cmd": "request",
+      "args": [
+        "GET",
+        "http://localhost:8095/api/revoked"
+      ],
+      "status": "ok",
+      "http_status": 401,
+      "auth_rejected": true
+    }
+  ],
+  "redaction_exempt": [],
+  "closed": true
+}
