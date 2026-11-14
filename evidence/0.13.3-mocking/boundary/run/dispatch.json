@@ -1,0 +1,38 @@
+{
+  "cap": 4,
+  "chain": [
+    "sonnet",
+    "inherit"
+  ],
+  "active": 0,
+  "stopped": null,
+  "seq": 1,
+  "breakers": {
+    "sonnet": {
+      "streak": 0,
+      "tripped": null
+    },
+    "inherit": {
+      "streak": 0,
+      "tripped": null
+    }
+  },
+  "trips": [],
+  "units": [
+    {
+      "id": "ex_1",
+      "status": "queued",
+      "seq": 0,
+      "not_before": 0,
+      "budget": {
+        "delegate": 0,
+        "used": 0
+      },
+      "attempts": []
+    }
+  ],
+  "locks": {},
+  "paused": [],
+  "retried": [],
+  "skipped": []
+}

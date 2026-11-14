@@ -1,0 +1,82 @@
+{
+  "note": "Redacted extract of the host transcripts: tool calls and results only; session context removed, e-mail addresses and the home path redacted.",
+  "session": "bd774ecd-592a-41f1-9840-f5a3eaed8243",
+  "parent": [
+    {
+      "at": "2026-11-14T17:22:53.437Z",
+      "use": "toolu_011Hku8WENV9Bu3tMqt3TttE",
+      "tool": "Bash",
+      "input": {
+        "command": "node <home>/.claude/plugins/cache/qa-skills-local/qa-skills/0.13.3/scripts/scan.mjs execute plan tc_5e7vr0rs level:ui --root .qa",
+        "description": "Plan execution for test case"
+      }
+    },
+    {
+      "at": "2026-11-14T17:22:54.609Z",
+      "result": "toolu_011Hku8WENV9Bu3tMqt3TttE",
+      "is_error": false,
+      "content": "{\n  \"mode\": \"execute\",\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-1IGoPi\",\n  \"executions\": 1,\n  \"skipped\": [],\n  \"warnings\": [],\n  \"text\": \"Execute 1 case against local-ui (http://localhost:4200).\\nSelection: tc_5e7vr0rs level:ui\\nLevels:\\n  tc_5e7vr0rs: bound (none); selected ui; executed ui; omitted (none)\\nRoles → Access notes:\\n  (no Role) → acc_local-observe\\nData handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.13.3/docs/support.md#data-handling\\nRun dir: /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-1IGoPi\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-1IGoPi'\"\n}"
+    },
+    {
+      "at": "2026-11-14T17:22:57.732Z",
+      "use": "toolu_017wrFQ1HY3BBnf4ScZQVC8J",
+      "tool": "Bash",
+      "input": {
+        "command": "node <home>/.claude/plugins/cache/qa-skills-local/qa-skills/0.13.3/scripts/scan.mjs execute confirm --dir /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-1IGoPi",
+        "description": "Confirm execution plan"
+      }
+    },
+    {
+      "at": "2026-11-14T17:22:58.096Z",
+      "result": "toolu_017wrFQ1HY3BBnf4ScZQVC8J",
+      "is_error": false,
+      "content": "{\n  \"mode\": \"execute\",\n  \"action\": \"confirm\",\n  \"ok\": true,\n  \"dir\": \"/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-1IGoPi\",\n  \"units\": 1\n}"
+    },
+    {
+      "at": "2026-11-14T17:23:01.208Z",
+      "use": "toolu_01WXcUpc9iDUxfCSaiet1WW6",
+      "tool": "Bash",
+      "input": {
+        "command": "node <home>/.claude/plugins/cache/qa-skills-local/qa-skills/0.13.3/scripts/scan.mjs execute open --dir /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-1IGoPi --execution ex_1 --root .qa",
+        "description": "Open execution ex_1"
+      }
+    },
+    {
+      "at": "2026-11-14T17:23:08.236Z",
+      "result": "toolu_01WXcUpc9iDUxfCSaiet1WW6",
+      "is_error": false,
+      "content": "{\n  \"mode\": \"execute\",\n  \"action\": \"open\",\n  \"ok\": true,\n  \"execution\": \"ex_1\",\n  \"dir\": \"/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-1IGoPi/executions/ex_1\",\n  \"cap\": 45,\n  \"sessions\": [\n    {\n      \"role\": \"-\",\n      \"name\": \"5erx824g-ex_1-default\",\n      \"acc\": \"acc_local-observe\",\n      \"setup\": false,\n      \"kind\": \"browser\"\n    }\n  ],\n  \"landing\": [\n    {\n      \"role\": \"-\",\n      \"name\": \"5erx824g-ex_1-default\",\n      \"page_url\": \"http://localhost:4200/\"\n    }\n  ]\n}"
+    },
+    {
+      "at": "2026-11-14T17:23:12.088Z",
+      "use": "toolu_01T3cPUqxJznqSDEryi29ZS8",
+      "tool": "Bash",
+      "input": {
+        "command": "node <home>/.claude/plugins/cache/qa-skills-local/qa-skills/0.13.3/scripts/scan.mjs tester do ex_1 - route 'http://localhost:8091/carts**' --header=X-Probe:1 --status=500 --dir /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-1IGoPi",
+        "description": "Run tester route with header and status 500"
+      }
+    },
+    {
+      "at": "2026-11-14T17:23:12.456Z",
+      "result": "toolu_01T3cPUqxJznqSDEryi29ZS8",
+      "is_error": true,
+      "content": "Exit code 1\n{\n  \"mode\": \"tester\",\n  \"ok\": false,\n  \"refusals\": [\n    {\n      \"code\": \"route_header\",\n      \"error\": \"Routes cannot rewrite outgoing request headers with --header\"\n    }\n  ],\n  \"used\": 1,\n  \"cap\": 45\n}"
+    },
+    {
+      "at": "2026-11-14T17:23:15.720Z",
+      "use": "toolu_018ej9qwyQYbwrugoTLggdUb",
+      "tool": "Bash",
+      "input": {
+        "command": "node <home>/.claude/plugins/cache/qa-skills-local/qa-skills/0.13.3/scripts/scan.mjs tester do ex_1 - route 'http://localhost:8091/carts**' --status=500 --dir /var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-1IGoPi",
+        "description": "Run tester route with status 500"
+      }
+    },
+    {
+      "at": "2026-11-14T17:23:17.120Z",
+      "result": "toolu_018ej9qwyQYbwrugoTLggdUb",
+      "is_error": false,
+      "content": "{\n  \"mode\": \"tester\",\n  \"action\": \"do\",\n  \"ok\": true,\n  \"command\": \"route\",\n  \"text\": \"### Result\\nRoute added for pattern: http://localhost:8091/carts**\",\n  \"used\": 2,\n  \"cap\": 45,\n  \"page_url\": \"http://localhost:4200/\"\n}"
+    }
+  ],
+  "children": {}
+}

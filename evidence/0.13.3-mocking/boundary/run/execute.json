@@ -1,0 +1,71 @@
+{
+  "root": "<home>/projects/qa-skills-live-evidence/.qa",
+  "confirmed": true,
+  "run": "5erx824g",
+  "target": {
+    "slug": "local-ui",
+    "origin": "http://localhost:4200"
+  },
+  "created_at": "2026-11-14T17:22:54.597Z",
+  "playwright_cli": "0.1.22",
+  "commit": "bd267fe0810c7cb0dc248304c18d226327cca2a4",
+  "tester": {
+    "tier": "standard",
+    "label": "sonnet"
+  },
+  "concurrency_cap": 4,
+  "executions": [
+    {
+      "id": "ex_1",
+      "key": "tc_5e7vr0rs",
+      "summary": "When the cart service answers with a server error, adding a product shows an error message and puts nothing in the cart",
+      "feature": "cart",
+      "text": "### tc_5e7vr0rs: When the cart service answers with a server error, adding a product shows an error message and puts nothing in the cart\n\n```yaml\nkey: tc_5e7vr0rs\nautomatable: true\ngenerated: {by: human:kinasr, at: \"2026-11-14\"}\n```\n\n**Preconditions.**\n\n- An empty cart in the current browser session\n- An in-stock product with a product page\n- The cart service answers every request to add a product to a cart with a server error\n\n**Steps.**\n\n1. Open the product page of the in-stock product.\n2. Add the product to the cart with the default quantity.\n3. Read the message the page shows after adding.\n4. Read the cart item count in the navigation bar.\n\n**Expected result.**\n\nThe page shows an error message after adding (its wording is not checked) and no confirmation that\nthe product was added. The navigation bar shows no cart item count, so the cart is still empty.",
+      "level": "ui",
+      "bound_levels": [],
+      "selected_levels": [
+        "ui"
+      ],
+      "omitted_levels": [],
+      "mode": "browser",
+      "digest": "445bb67611ec8435",
+      "dirty": false,
+      "review": "none",
+      "stale": false,
+      "roles": [],
+      "access": [
+        "acc_local-observe"
+      ],
+      "sessions": [
+        {
+          "role": "-",
+          "acc": "acc_local-observe",
+          "setup": false
+        }
+      ],
+      "cap": 45
+    }
+  ],
+  "skipped": [],
+  "selection": {
+    "scope": [
+      "tc_5e7vr0rs"
+    ],
+    "tags": [],
+    "levels": [
+      "ui"
+    ]
+  },
+  "route_origins": [
+    "http://localhost:8091",
+    "https://practicesoftwaretesting.com",
+    "https://api.practicesoftwaretesting.com",
+    "http://localhost:8095",
+    "http://localhost:8096"
+  ],
+  "route_sign_in_urls": [
+    "http://localhost:4200/auth/login",
+    "http://localhost:8091/users/login",
+    "http://localhost:8096/login"
+  ]
+}

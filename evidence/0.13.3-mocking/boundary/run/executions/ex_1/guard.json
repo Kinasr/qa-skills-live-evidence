@@ -1,0 +1,75 @@
+{
+  "id": "ex_1",
+  "run": "5erx824g",
+  "origin": "http://localhost:4200",
+  "cap": 45,
+  "used": 2,
+  "stopped": null,
+  "sessions": [
+    {
+      "role": "-",
+      "acc": "acc_local-observe",
+      "setup": false,
+      "slug": "default",
+      "name": "5erx824g-ex_1-default",
+      "kind": "browser",
+      "login_url": "http://localhost:4200/auth/login"
+    }
+  ],
+  "login_sessions": [
+    "5erx824g-ex_1-default-login"
+  ],
+  "match": {
+    "-": [
+      "url:http://localhost:4200/"
+    ]
+  },
+  "route_origins": [
+    "http://localhost:8091",
+    "https://practicesoftwaretesting.com",
+    "https://api.practicesoftwaretesting.com",
+    "http://localhost:8095",
+    "http://localhost:8096"
+  ],
+  "route_sign_in_urls": [
+    "http://localhost:4200/auth/login",
+    "http://localhost:8091/users/login",
+    "http://localhost:8096/login"
+  ],
+  "uploads": {},
+  "at_login": [],
+  "log": [
+    {
+      "n": 1,
+      "role": "-",
+      "cmd": "route",
+      "args": [
+        "http://localhost:8091/carts**",
+        "--header",
+        "--status"
+      ],
+      "status": "refused",
+      "code": "route_header"
+    },
+    {
+      "n": 2,
+      "role": "-",
+      "cmd": "route",
+      "args": [
+        "http://localhost:8091/carts**",
+        "--status=500"
+      ],
+      "status": "ok",
+      "route": {
+        "pattern": "http://localhost:8091/carts**",
+        "status": 500
+      },
+      "evidence": {
+        "target": "none"
+      },
+      "page_url": "http://localhost:4200/"
+    }
+  ],
+  "redaction_exempt": [],
+  "closed": true
+}

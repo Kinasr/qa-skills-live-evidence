@@ -1,0 +1,8 @@
+$ playwright-cli list   (cwd: the Execution dir)
+  (no browsers)
+
+$ playwright-cli -s=1yfbqn8k-ex_1-default route-list   (cwd: the Execution dir)
+The browser '1yfbqn8k-ex_1-default' is not open, please run open first
+
+  playwright-cli -s=1yfbqn8k-ex_1-default open [params]
+exit 1

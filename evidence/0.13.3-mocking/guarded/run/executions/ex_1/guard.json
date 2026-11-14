@@ -1,0 +1,181 @@
+{
+  "id": "ex_1",
+  "run": "1yfbqn8k",
+  "origin": "http://localhost:4200",
+  "cap": 45,
+  "used": 8,
+  "stopped": null,
+  "sessions": [
+    {
+      "role": "-",
+      "acc": "acc_local-observe",
+      "setup": false,
+      "slug": "default",
+      "name": "1yfbqn8k-ex_1-default",
+      "kind": "browser",
+      "login_url": "http://localhost:4200/auth/login"
+    }
+  ],
+  "login_sessions": [
+    "1yfbqn8k-ex_1-default-login"
+  ],
+  "match": {
+    "-": [
+      "url:http://localhost:4200/"
+    ]
+  },
+  "route_origins": [
+    "http://localhost:8091",
+    "https://practicesoftwaretesting.com",
+    "https://api.practicesoftwaretesting.com",
+    "http://localhost:8095",
+    "http://localhost:8096"
+  ],
+  "route_sign_in_urls": [
+    "http://localhost:4200/auth/login",
+    "http://localhost:8091/users/login",
+    "http://localhost:8096/login"
+  ],
+  "uploads": {},
+  "at_login": [],
+  "log": [
+    {
+      "n": 1,
+      "role": "-",
+      "cmd": "route",
+      "args": [
+        "http://localhost:8091/carts**",
+        "--status=500",
+        "--body=26 bytes",
+        "--content-type=application/json"
+      ],
+      "status": "ok",
+      "route": {
+        "pattern": "http://localhost:8091/carts**",
+        "status": 500,
+        "content_type": "application/json",
+        "body_bytes": 26
+      },
+      "evidence": {
+        "target": "none"
+      },
+      "page_url": "http://localhost:4200/"
+    },
+    {
+      "n": 2,
+      "role": "-",
+      "cmd": "goto",
+      "args": [
+        "/"
+      ],
+      "status": "ok",
+      "page_url": "http://localhost:4200/"
+    },
+    {
+      "n": 3,
+      "role": "-",
+      "cmd": "snapshot",
+      "args": [],
+      "status": "ok",
+      "page_url": "http://localhost:4200/"
+    },
+    {
+      "n": 4,
+      "role": "-",
+      "cmd": "goto",
+      "args": [
+        "/product/01M7DH3RE9E1VKBX23TW8J3T45"
+      ],
+      "status": "ok",
+      "page_url": "http://localhost:4200/product/01M7DH3RE9E1VKBX23TW8J3T45"
+    },
+    {
+      "n": 5,
+      "role": "-",
+      "cmd": "snapshot",
+      "args": [],
+      "status": "ok",
+      "page_url": "http://localhost:4200/product/01M7DH3RE9E1VKBX23TW8J3T45"
+    },
+    {
+      "n": 6,
+      "role": "-",
+      "cmd": "click",
+      "args": [
+        "f2e100"
+      ],
+      "status": "ok",
+      "evidence": {
+        "aria": "button",
+        "locator": "locator('[data-test=\"add-to-cart\"]')",
+        "excerpt": {
+          "element": {
+            "tag": "button",
+            "attributes": {
+              "class": "btn-success btn",
+              "data-test": "add-to-cart",
+              "id": "btn-add-to-cart"
+            }
+          },
+          "ancestors": [
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "btn-group mt-2"
+              }
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "col-md-6"
+              }
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "row my-3"
+              }
+            },
+            {
+              "tag": "app-detail",
+              "attributes": {}
+            },
+            {
+              "tag": "div",
+              "attributes": {
+                "class": "container"
+              }
+            },
+            {
+              "tag": "app-root",
+              "attributes": {}
+            },
+            {
+              "tag": "body",
+              "attributes": {}
+            }
+          ]
+        }
+      },
+      "page_url": "http://localhost:4200/product/01M7DH3RE9E1VKBX23TW8J3T45"
+    },
+    {
+      "n": 7,
+      "role": "-",
+      "cmd": "snapshot",
+      "args": [],
+      "status": "ok",
+      "page_url": "http://localhost:4200/product/01M7DH3RE9E1VKBX23TW8J3T45"
+    },
+    {
+      "n": 8,
+      "role": "-",
+      "cmd": "console",
+      "args": [],
+      "status": "ok",
+      "page_url": "http://localhost:4200/product/01M7DH3RE9E1VKBX23TW8J3T45"
+    }
+  ],
+  "redaction_exempt": [],
+  "closed": true
+}
