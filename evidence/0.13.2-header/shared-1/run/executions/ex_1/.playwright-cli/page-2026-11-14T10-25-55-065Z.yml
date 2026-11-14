@@ -1,0 +1,4 @@
+- generic [active] [ref=e1]:
+  - heading "Fixture home" [level=1] [ref=e2]
+  - paragraph [ref=e3]: Signed in as fixture-tester
+  - paragraph [ref=e4]: "Origin: http://localhost:8096"

@@ -112,7 +112,7 @@ async function handle(req, res, origin) {
       authorized,
       origin,
       method: req.method,
-      session_user: user,
+      signed_in_as: user,
       received_headers: received,
       raw_headers: raw,
       // The Authorization value as received, and without its first word, under a key that names no

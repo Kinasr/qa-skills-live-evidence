@@ -1,0 +1,14 @@
+{
+  "started": "2026-11-14T10:22:31.114Z",
+  "samples": 1342,
+  "samples_with_playwright_cli": 6,
+  "playwright_cli_subcommands": {
+    "(none)": 2
+  },
+  "run_code_with_filename": 0,
+  "run_code_inline": 0,
+  "argv_with_secret": 0,
+  "stopped": "2026-11-14T10:24:46.564Z",
+  "playwright_cli_processes": 2,
+  "verdict": "NO_SECRET_IN_ARGV"
+}

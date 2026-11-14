@@ -1,0 +1,25 @@
+{
+  "scheme": "Bearer",
+  "secret_length": 42,
+  "scanned": [
+    {
+      "path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-DlF9EN",
+      "files": 10
+    },
+    {
+      "path": "<home>/projects/qa-skills-live-evidence/.qa/executions/2026-11-14-argehbes.md",
+      "files": 1
+    },
+    {
+      "path": "/var/folders/1f/1165vl517sxc96vr6k7ryry40000gn/T/qa-skills-execute-DlF9EN/executions/ex_1/tester.report.md",
+      "files": 1
+    },
+    {
+      "path": "<home>/projects/qa-skills-live-evidence/evidence/0.13.2-header/header-only",
+      "files": 12
+    }
+  ],
+  "hits": [],
+  "leftovers": [],
+  "verdict": "CLEAN"
+}

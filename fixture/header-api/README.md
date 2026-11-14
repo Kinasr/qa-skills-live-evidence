@@ -11,7 +11,7 @@ npm run fixture:start    # serves http://localhost:8095 (API origin) and http://
 | --- | --- |
 | `GET /` | A page saying who is signed in, or linking to `/login` |
 | `GET /login`, `POST /login` | A single form of user name and password; a correct pair sets a `fixture_session` cookie |
-| `GET /api/echo` | `200 {authorized: true, …}` when `Authorization: Bearer <FIXTURE_API_TOKEN>` arrives, `401 {authorized: false, …}` otherwise; always echoes the request headers it received (the session cookie as `<session of …>` or `<no session>`) and `session_user` |
+| `GET /api/echo` | `200 {authorized: true, …}` when `Authorization: Bearer <FIXTURE_API_TOKEN>` arrives, `401 {authorized: false, …}` otherwise; always echoes the request headers it received (the session cookie as `<session of …>` or `<no session>`) and `signed_in_as` |
 | `GET /api/revoked` | Always `401 {authorized: false, …}`, as if the configured key had been revoked, with the same echo |
 
 Each echo carries the headers twice: `received_headers` (name to value) and `raw_headers`

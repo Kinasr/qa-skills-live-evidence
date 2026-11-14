@@ -50,10 +50,10 @@ generated: {by: human:kinasr, at: 2026-11-14}
 
 1. Open the home page and read who it says is signed in
 2. Send GET `/api/echo` with the default credential
-3. Read the response status, its `authorized` and `session_user` fields, and the `authorization` header it lists under `received_headers`
+3. Read the response status, its `authorized` and `signed_in_as` fields, and the `authorization` header it lists under `received_headers`
 
 **Expected result.**
 
 The home page says the test account is signed in. The call is answered 200 with
-`authorized: true` and `session_user` naming the test account, and `received_headers` lists an
+`authorized: true` and `signed_in_as` naming the test account, and `received_headers` lists an
 `authorization` header.

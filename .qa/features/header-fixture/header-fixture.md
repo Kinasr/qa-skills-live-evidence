@@ -19,4 +19,4 @@ credentials on a real host, not as an application under test in its own right.
 1. **rule_h7k2**: A call to `/api/echo` that carries the configured credential is answered 200 with `authorized: true`, and the echo lists the `authorization` header it received.
 2. **rule_m4q9**: A call to `/api/echo` with a credential that is not the configured one is answered 401 with `authorized: false`.
 3. **rule_r8v3**: A call to `/api/revoked` is answered 401 with `authorized: false` whatever credential it carries; it stands in for a key the API no longer accepts.
-4. **rule_p2w6**: A signed-in user's call to `/api/echo` on the app origin is answered with that user as `session_user`, alongside the credential check.
+4. **rule_p2w6**: A signed-in user's call to `/api/echo` on the app origin is answered with that user as `signed_in_as`, alongside the credential check.
