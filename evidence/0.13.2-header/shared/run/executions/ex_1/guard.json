@@ -1,0 +1,63 @@
+{
+  "id": "ex_1",
+  "run": "8eba4tz2",
+  "origin": "http://localhost:8096",
+  "cap": 30,
+  "used": 3,
+  "stopped": null,
+  "sessions": [
+    {
+      "role": "-",
+      "acc": "acc_fixture-app",
+      "setup": false,
+      "slug": "default",
+      "name": "8eba4tz2-ex_1-default",
+      "header": true,
+      "kind": "browser",
+      "login_url": "http://localhost:8096/login"
+    }
+  ],
+  "login_sessions": [
+    "8eba4tz2-ex_1-default-login"
+  ],
+  "match": {
+    "-": [
+      "url:http://localhost:8096/"
+    ]
+  },
+  "uploads": {},
+  "at_login": [],
+  "log": [
+    {
+      "n": 1,
+      "role": "-",
+      "cmd": "goto",
+      "args": [
+        "/"
+      ],
+      "status": "ok",
+      "page_url": "http://localhost:8096/"
+    },
+    {
+      "n": 2,
+      "role": "-",
+      "cmd": "request",
+      "args": [
+        "GET",
+        "http://localhost:8096/api/echo"
+      ],
+      "status": "ok",
+      "http_status": 200
+    },
+    {
+      "n": 3,
+      "role": "-",
+      "cmd": "console",
+      "args": [],
+      "status": "ok",
+      "page_url": "http://localhost:8096/"
+    }
+  ],
+  "redaction_exempt": [],
+  "closed": true
+}
