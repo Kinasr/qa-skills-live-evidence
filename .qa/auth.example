@@ -2,6 +2,13 @@
 # Copy this file to `.qa/auth` in the main checkout and fill in each value. `.qa/auth` is git-ignored.
 # Lines are KEY=value, read literally: no quotes, and an empty value counts as missing.
 
+# acc_fixture-api (no Role): header credential; from: A throwaway value the maintainer generates for the local fixture app; see fixture/header-api/README.md
+# acc_fixture-app (no Role, user fixture-tester): header credential; from: A throwaway value the maintainer generates for the local fixture app; see fixture/header-api/README.md
+FIXTURE_API_TOKEN=
+
+# acc_fixture-app (no Role, user fixture-tester): password; from: A throwaway value the maintainer generates for the local fixture app; see fixture/header-api/README.md
+FIXTURE_APP_PASSWORD=
+
 # acc_local-admin (Role Admin, user admin@practicesoftwaretesting.com): password; from: The seeded demo accounts listed in the upstream practice-software-testing README
 LOCAL_ADMIN_PASSWORD=
 

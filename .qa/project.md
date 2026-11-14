@@ -11,7 +11,7 @@ tags: {e2e: "Exercises a whole user flow through the UI and API together", smoke
 concurrency_cap: 4
 commit_mode: auto
 tiers: {deep: opus, standard: sonnet, light: haiku}
-targets: {local-ui: "http://localhost:4200", local-api: "http://localhost:8091", public-ui: "https://practicesoftwaretesting.com", public-api: "https://api.practicesoftwaretesting.com"}
+targets: {local-ui: "http://localhost:4200", local-api: "http://localhost:8091", public-ui: "https://practicesoftwaretesting.com", public-api: "https://api.practicesoftwaretesting.com", fixture-api: "http://localhost:8095", fixture-app: "http://localhost:8096"}
 execute_levels: {api: api, ui: browser}
 level_targets: {api: local-api, ui: local-ui}
 test_runner: {tool: playwright, dir: ., target_env: [TOOLSHOP_UI_URL]}

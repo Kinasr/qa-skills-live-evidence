@@ -45,3 +45,30 @@ added: 2026-11-13
 ```
 
 A dedicated account for `/qa-deep-dive`'s `observe:`, so exploring never touches the Role accounts' data.
+
+### acc_fixture-api: the header-credential fixture's API origin, header-only
+
+```yaml
+match: ["url:http://localhost:8095/"]
+header_via: auth:FIXTURE_API_TOKEN
+identifiers: {header: Authorization, scheme: Bearer}
+credential_from: "A throwaway value the maintainer generates for the local fixture app; see fixture/header-api/README.md"
+sources: [human:kinasr]
+added: 2026-11-14
+```
+
+The local fixture app (`npm run fixture:start`) for the Header-credentials live evidence. This origin has no login: a header-only session sends `tester request` calls with the CLI-injected `Authorization: Bearer` header, and `/api/echo` echoes back the headers it received.
+
+### acc_fixture-app: the header-credential fixture's app origin, UI login plus header
+
+```yaml
+match: ["url:http://localhost:8096/"]
+via: auth:FIXTURE_APP_PASSWORD
+header_via: auth:FIXTURE_API_TOKEN
+identifiers: {user: fixture-tester, login_url: "http://localhost:8096/login", header: Authorization, scheme: Bearer}
+credential_from: "A throwaway value the maintainer generates for the local fixture app; see fixture/header-api/README.md"
+sources: [human:kinasr]
+added: 2026-11-14
+```
+
+The same fixture app on its app origin. A single form takes user name and password on /login and sets a session cookie; `tester request` calls carry that session and the CLI-injected `Authorization: Bearer` header.

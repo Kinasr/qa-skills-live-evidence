@@ -10,7 +10,9 @@
     "test": "playwright test",
     "test:api": "playwright test --project=api",
     "test:ui": "playwright test --project=ui",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "fixture:start": "node fixture/header-api/server.mjs",
+    "scan:header": "node scripts/header-fixture/scan-secret.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.65.0",

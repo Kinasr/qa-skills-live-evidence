@@ -1,0 +1,54 @@
+{
+  "mode": "train",
+  "action": "check",
+  "target": "access",
+  "ok": false,
+  "file": ".qa/train/access.md",
+  "path": "/Users/kinasr/projects/qa-skills-live-evidence/.qa/train/access.md",
+  "errors": [
+    {
+      "code": "credential_auth_not_ignored",
+      "field": "via",
+      "line": 8,
+      "message": "Git would track this worktree's `.qa/auth`: add this line to its checkout's `.gitignore`: `/.qa/auth` before using it for credentials"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "auth_keys_missing",
+      "field": "header_via",
+      "line": 49,
+      "message": "No Auth file holds `FIXTURE_API_TOKEN`: add `FIXTURE_API_TOKEN=` to `.qa/auth` (`scout password-steps auth:FIXTURE_API_TOKEN` says how)"
+    },
+    {
+      "code": "auth_keys_missing",
+      "field": "via",
+      "line": 62,
+      "message": "No Auth file holds `FIXTURE_APP_PASSWORD`: add `FIXTURE_APP_PASSWORD=` to `.qa/auth` (`scout password-steps auth:FIXTURE_APP_PASSWORD` says how)"
+    },
+    {
+      "code": "auth_keys_missing",
+      "field": "via",
+      "line": 8,
+      "message": "No Auth file holds `LOCAL_ADMIN_PASSWORD`: add `LOCAL_ADMIN_PASSWORD=` to `.qa/auth` (`scout password-steps auth:LOCAL_ADMIN_PASSWORD` says how)"
+    },
+    {
+      "code": "auth_keys_missing",
+      "field": "via",
+      "line": 36,
+      "message": "No Auth file holds `LOCAL_OBSERVE_PASSWORD`: add `LOCAL_OBSERVE_PASSWORD=` to `.qa/auth` (`scout password-steps auth:LOCAL_OBSERVE_PASSWORD` says how)"
+    },
+    {
+      "code": "auth_keys_missing",
+      "field": "via",
+      "line": 22,
+      "message": "No Auth file holds `LOCAL_USER_PASSWORD`: add `LOCAL_USER_PASSWORD=` to `.qa/auth` (`scout password-steps auth:LOCAL_USER_PASSWORD` says how)"
+    }
+  ],
+  "access_notes": {
+    "added": [],
+    "edited": [],
+    "removed": []
+  },
+  "statability": []
+}

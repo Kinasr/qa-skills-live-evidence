@@ -1,0 +1,22 @@
+{
+  "mode": "train",
+  "action": "check",
+  "target": "access",
+  "ok": true,
+  "file": ".qa/train/access.md",
+  "path": "/Users/kinasr/projects/qa-skills-live-evidence/.qa/train/access.md",
+  "errors": [],
+  "warnings": [],
+  "access_notes": {
+    "added": [],
+    "edited": [],
+    "removed": []
+  },
+  "statability": [],
+  "changeset": [
+    ".qa/train/access.md",
+    ".qa/auth.example"
+  ],
+  "commit": "git add -- .qa/train/access.md .qa/auth.example && git commit -m \"qa(train): /qa-train access\" -- .qa/train/access.md .qa/auth.example",
+  "access_files": []
+}
