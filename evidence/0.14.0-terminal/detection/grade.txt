@@ -1,0 +1,7 @@
+claude: 2.1.308 (Claude Code)
+state: $TMPDIR/qa-trust-core-ESDxfk/state.json
+| qa-skills revision | Claude Code | Surface | OS | Condition | Outcome | Date | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.14.0 @ 0a68a48 | 2.1.308 | terminal CLI (local marketplace, distinct name) | macOS 27.2.1 | host-version detection working on the floor version | PASS | 2026-11-16 | TODO: link |
+detection: PASS: host-version detection worked at the floor 2.1.308: CLAUDE_CODE_EXECPATH "~/.qa-runs/evidence-0.13.1/cc308/node_modules/@anthropic-ai/claude-code/bin/claude.exe" (absolute); --version answer "2.1.308 (Claude Code)"; AI_AGENT "claude-code_2-1-308_agent"; route guarded admission
+probe exit 0

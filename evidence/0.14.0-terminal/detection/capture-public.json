@@ -1,0 +1,79 @@
+{
+  "note": "Publishable extract of capture.json: tool calls and results only, e-mail addresses redacted. The verdict was graded from the full capture.",
+  "readErrors": [],
+  "files": {
+    "detection-agent.txt": "claude-code_2-1-308_agent\n",
+    "detection-execpath.txt": "~/.qa-runs/evidence-0.13.1/cc308/node_modules/@anthropic-ai/claude-code/bin/claude.exe\n",
+    "detection-plan.json": "{\n  \"mode\": \"execute\",\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"$TMPDIR/qa-skills-execute-DJWEYM\",\n  \"executions\": 1,\n  \"skipped\": [],\n  \"warnings\": [],\n  \"text\": \"Execute 1 case against local-ui (http://localhost:4200).\\nSelection: tc_d68h3nc7 level:ui\\nLevels:\\n  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\\nRoles → Access notes:\\n  (no Role) → acc_local-observe\\nData handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.14.0/docs/support.md#data-handling\\nRun dir: $TMPDIR/qa-skills-execute-DJWEYM\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '$TMPDIR/qa-skills-execute-DJWEYM'\"\n}\n",
+    "detection-version.json": "{\"exit\":0,\"stdout\":\"2.1.308 (Claude Code)\\n\",\"stderr\":\"\"}\n",
+    "project.json": "{\"projectDir\":\"~/projects/qa-skills-live-evidence\"}\n"
+  },
+  "parent": [
+    {
+      "use": "toolu_01KQXDirD5R69qWRPse71m1u",
+      "tool": "Bash",
+      "input": {
+        "command": "printenv CLAUDE_CODE_EXECPATH",
+        "description": "Read CLAUDE_CODE_EXECPATH"
+      }
+    },
+    {
+      "result": "toolu_01KQXDirD5R69qWRPse71m1u",
+      "is_error": false,
+      "content": "~/.qa-runs/evidence-0.13.1/cc308/node_modules/@anthropic-ai/claude-code/bin/claude.exe"
+    },
+    {
+      "use": "toolu_01FMmCEeAHP3r3WCDwg7rhQn",
+      "tool": "Bash",
+      "input": {
+        "command": "node -e 'const p=process.env.CLAUDE_CODE_EXECPATH;const r=p&&require(\"node:path\").isAbsolute(p)?require(\"node:child_process\").spawnSync(p,[\"--version\"],{encoding:\"utf8\"}):{status:null,stdout:\"\",stderr:\"CLAUDE_CODE_EXECPATH is unset or not absolute\"};console.log(JSON.stringify({exit:r.status,stdout:r.stdout??\"\",stderr:r.stderr??\"\"}))'",
+        "description": "Probe host executable version"
+      }
+    },
+    {
+      "result": "toolu_01FMmCEeAHP3r3WCDwg7rhQn",
+      "is_error": false,
+      "content": "{\"exit\":0,\"stdout\":\"2.1.308 (Claude Code)\\n\",\"stderr\":\"\"}"
+    },
+    {
+      "use": "toolu_01L4mvQ2k2K6LUqnzv25qkeT",
+      "tool": "Bash",
+      "input": {
+        "command": "printenv AI_AGENT",
+        "description": "Read AI_AGENT"
+      }
+    },
+    {
+      "result": "toolu_01L4mvQ2k2K6LUqnzv25qkeT",
+      "is_error": false,
+      "content": "claude-code_2-1-308_agent"
+    },
+    {
+      "use": "toolu_019NZBRNXsnrnSrfWYR9tCMd",
+      "tool": "Bash",
+      "input": {
+        "command": "node '~/.qa-runs/evidence-0.14.0/marketplace/plugin/scripts/scan.mjs' execute plan 'tc_d68h3nc7' 'level:ui'",
+        "description": "Plan the execute Run"
+      }
+    },
+    {
+      "result": "toolu_019NZBRNXsnrnSrfWYR9tCMd",
+      "is_error": false,
+      "content": "{\n  \"mode\": \"execute\",\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"$TMPDIR/qa-skills-execute-DJWEYM\",\n  \"executions\": 1,\n  \"skipped\": [],\n  \"warnings\": [],\n  \"text\": \"Execute 1 case against local-ui (http://localhost:4200).\\nSelection: tc_d68h3nc7 level:ui\\nLevels:\\n  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\\nRoles → Access notes:\\n  (no Role) → acc_local-observe\\nData handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.14.0/docs/support.md#data-handling\\nRun dir: $TMPDIR/qa-skills-execute-DJWEYM\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '$TMPDIR/qa-skills-execute-DJWEYM'\"\n}"
+    },
+    {
+      "use": "toolu_018fm6nitkjG53sEMWzKDNNX",
+      "tool": "Bash",
+      "input": {
+        "command": "E=$TMPDIR/qa-trust-core-ESDxfk/evidence\nmkdir -p \"$E\"\nprintf '%s\\n' '~/.qa-runs/evidence-0.13.1/cc308/node_modules/@anthropic-ai/claude-code/bin/claude.exe' > \"$E/detection-execpath.txt\"\nprintf '%s\\n' '{\"exit\":0,\"stdout\":\"2.1.308 (Claude Code)\\n\",\"stderr\":\"\"}' > \"$E/detection-version.json\"\nprintf '%s\\n' 'claude-code_2-1-308_agent' > \"$E/detection-agent.txt\"\ncat > \"$E/detection-plan.json\" <<'EOF'\n{\n  \"mode\": \"execute\",\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"$TMPDIR/qa-skills-execute-DJWEYM\",\n  \"executions\": 1,\n  \"skipped\": [],\n  \"warnings\": [],\n  \"text\": \"Execute 1 case against local-ui (http://localhost:4200).\\nSelection: tc_d68h3nc7 level:ui\\nLevels:\\n  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\\nRoles → Access notes:\\n  (no Role) → acc_local-observe\\nData handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.14.0/docs/support.md#data-handling\\nRun dir: $TMPDIR/qa-skills-execute-DJWEYM\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '$TMPDIR/qa-skills-execute-DJWEYM'\"\n}\nEOF\nls -la \"$E\"; node -e 'JSON.parse(require(\"fs\").readFileSync(process.argv[1]))' \"$E/detection-version.json\" && node -e 'JSON.parse(require(\"fs\").readFileSync(process.argv[1]))' \"$E/detection-plan.json\" && echo valid",
+        "description": "Save the four detection observations"
+      }
+    },
+    {
+      "result": "toolu_018fm6nitkjG53sEMWzKDNNX",
+      "is_error": false,
+      "content": "total 32\ndrwxr-xr-x@ 6 user  staff   192 Nov 16 10:11 .\ndrwx------@ 6 user  staff   192 Nov 16 10:10 ..\n-rw-r--r--@ 1 user  staff    26 Nov 16 10:11 detection-agent.txt\n-rw-r--r--@ 1 user  staff    99 Nov 16 10:11 detection-execpath.txt\n-rw-r--r--@ 1 user  staff  1085 Nov 16 10:11 detection-plan.json\n-rw-r--r--@ 1 user  staff    58 Nov 16 10:11 detection-version.json\nvalid"
+    }
+  ],
+  "children": {}
+}

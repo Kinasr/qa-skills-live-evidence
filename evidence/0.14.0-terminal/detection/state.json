@@ -1,0 +1,33 @@
+{
+  "context": {
+    "projectDir": "~/projects/qa-skills-live-evidence",
+    "stateDir": "$TMPDIR/qa-trust-core-ESDxfk",
+    "pluginDir": "~/.qa-runs/evidence-0.14.0/marketplace/plugin",
+    "selection": [
+      "tc_d68h3nc7",
+      "level:ui"
+    ],
+    "surface": "terminal CLI",
+    "installed": true,
+    "release": {
+      "revision": "0.14.0 @ 0a68a48",
+      "commit": "0a68a48",
+      "gitDir": "~/projects/qa-skills/.claude/worktrees/evidence-0-14-0-a5bd77",
+      "hookPath": "plugin/hooks/hooks.json"
+    }
+  },
+  "modeId": "detection",
+  "sessionId": "a133d621-30ed-4e14-a902-88fd62a5c355",
+  "preparation": {
+    "pluginDir": "~/.qa-runs/evidence-0.14.0/marketplace/plugin",
+    "installMethod": "local marketplace, distinct name",
+    "instructions": "Parent setup for detection, which overrides the lifecycle below and stops after the plan. Save these four observations from the running host under $TMPDIR/qa-trust-core-ESDxfk/evidence before doing anything else. 1. Read the exact CLAUDE_CODE_EXECPATH value by running the standalone Bash command printenv CLAUDE_CODE_EXECPATH and save its exact result to $TMPDIR/qa-trust-core-ESDxfk/evidence/detection-execpath.txt, or <unset> when empty. 2. Run this exact standalone Bash command: node -e 'const p=process.env.CLAUDE_CODE_EXECPATH;const r=p&&require(\"node:path\").isAbsolute(p)?require(\"node:child_process\").spawnSync(p,[\"--version\"],{encoding:\"utf8\"}):{status:null,stdout:\"\",stderr:\"CLAUDE_CODE_EXECPATH is unset or not absolute\"};console.log(JSON.stringify({exit:r.status,stdout:r.stdout??\"\",stderr:r.stderr??\"\"}))'. Save its exact JSON stdout to $TMPDIR/qa-trust-core-ESDxfk/evidence/detection-version.json. 3. Run the standalone Bash command printenv AI_AGENT and save its exact result to $TMPDIR/qa-trust-core-ESDxfk/evidence/detection-agent.txt, or <unset> when empty. 4. Run the standalone execute plan command named below, without redirects or other shell operations. Save its exact JSON stdout to $TMPDIR/qa-trust-core-ESDxfk/evidence/detection-plan.json before acting on it. Then stop: do not confirm, open, brief, launch a Tester or ingest. An Unguarded Run offer is recorded as that offer, never accepted."
+  },
+  "metadata": {
+    "revision": "0.14.0 @ 0a68a48",
+    "claudeVersion": "",
+    "surface": "terminal CLI (local marketplace, distinct name)",
+    "os": "macOS 27.2.1",
+    "date": "2026-11-16"
+  }
+}

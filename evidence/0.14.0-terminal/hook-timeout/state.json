@@ -1,0 +1,35 @@
+{
+  "context": {
+    "projectDir": "~/projects/qa-skills-live-evidence",
+    "stateDir": "$TMPDIR/qa-trust-core-0xkmsp",
+    "pluginDir": "$TMPDIR/qa-trust-core-0xkmsp/marketplace/plugin",
+    "selection": [
+      "tc_d68h3nc7",
+      "level:ui"
+    ],
+    "surface": "desktop app",
+    "installed": true,
+    "release": {
+      "revision": "0.14.0 @ 0a68a48",
+      "commit": "0a68a48",
+      "gitDir": "~/projects/qa-skills/.claude/worktrees/evidence-0-14-0-a5bd77",
+      "hookPath": "plugin/hooks/hooks.json"
+    }
+  },
+  "modeId": "hook-timeout",
+  "sessionId": "4e64a9a3-0d86-4291-9aa7-6cac4459e78f",
+  "preparation": {
+    "pluginDir": "$TMPDIR/qa-trust-core-0xkmsp/marketplace/plugin",
+    "installMethod": "faulted copy, local marketplace",
+    "instructions": "Before launching the Tester, capture plugin state: copy ~/projects/qa-skills-live-evidence/.claude/settings.local.json byte-for-byte to $TMPDIR/qa-trust-core-0xkmsp/evidence/hook-settings.local.json. Identify the actually loaded faulted plugin root in this session (for desktop use the installed marketplace cache, not the source directory); copy its hooks/hooks.json byte-for-byte to $TMPDIR/qa-trust-core-0xkmsp/evidence/hook-active.json. Inspect the session's effective plugin settings, including user, project, local and managed settings and session overrides; verify no other qa-skills registration is enabled. Save the observed effective enabledPlugins object as JSON with an enabledPlugins field to $TMPDIR/qa-trust-core-0xkmsp/evidence/hook-effective.json, recording all qa-skills registrations. If the active root or effective settings cannot be established, stop and leave the evidence missing. Copy the source files as-is; do not guess effective settings.",
+    "engineerSteps": "Before opening the desktop session, preserve the previous contents of ~/projects/qa-skills-live-evidence/.claude/settings.local.json (or record that the file was absent). Merge these entries into that file without removing its other settings: {\n  \"extraKnownMarketplaces\": {\n    \"qa-trust-core-fault\": {\n      \"source\": {\n        \"source\": \"directory\",\n        \"path\": \"$TMPDIR/qa-trust-core-0xkmsp/marketplace\"\n      }\n    }\n  },\n  \"enabledPlugins\": {\n    \"qa-skills@qa-trust-core-fault\": true,\n    \"qa-skills@qa-skills\": false,\n    \"qa-skills@qa-skills-local\": false\n  }\n}. Close and restart the desktop Code session on the project, then paste the prompt below. After grading, restore the file's previous content (or remove it if it was absent) and restart the session again.",
+    "sessionSettingsEvidence": "hook-session-settings.json"
+  },
+  "metadata": {
+    "revision": "0.14.0 @ 0a68a48",
+    "claudeVersion": "",
+    "surface": "desktop app (faulted copy, local marketplace)",
+    "os": "macOS 27.2.1",
+    "date": "2026-11-16"
+  }
+}

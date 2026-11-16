@@ -1,0 +1,27 @@
+{
+  "enabledPlugins": {
+    "qa-skills@qa-skills": false,
+    "qa-skills@qa-skills-local": false,
+    "qa-skills@qa-trust-core-fault": true
+  },
+  "extraKnownMarketplaces": {
+    "qa-skills": {
+      "source": {
+        "source": "directory",
+        "path": "~/projects/qa-skills-evidence"
+      }
+    },
+    "qa-skills-local": {
+      "source": {
+        "source": "directory",
+        "path": "~/.qa-runs/evidence-0.14.0/marketplace"
+      }
+    },
+    "qa-trust-core-fault": {
+      "source": {
+        "source": "directory",
+        "path": "$TMPDIR/qa-trust-core-0xkmsp/marketplace"
+      }
+    }
+  }
+}

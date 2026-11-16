@@ -1,0 +1,33 @@
+{
+  "context": {
+    "projectDir": "~/projects/qa-skills-live-evidence",
+    "stateDir": "$TMPDIR/qa-trust-core-kezhIt",
+    "pluginDir": "~/.qa-runs/evidence-0.14.0/marketplace/plugin",
+    "selection": [
+      "tc_d68h3nc7",
+      "level:ui"
+    ],
+    "surface": "terminal CLI",
+    "installed": true,
+    "release": {
+      "revision": "0.14.0 @ 0a68a48",
+      "commit": "0a68a48",
+      "gitDir": "~/projects/qa-skills/.claude/worktrees/evidence-0-14-0-a5bd77",
+      "hookPath": "plugin/hooks/hooks.json"
+    }
+  },
+  "modeId": "artifact-placement",
+  "sessionId": "c43dbfbc-476d-4860-bc46-9eb33c8aadc8",
+  "preparation": {
+    "pluginDir": "~/.qa-runs/evidence-0.14.0/marketplace/plugin",
+    "installMethod": "local marketplace, distinct name",
+    "instructions": "Parent setup for artifact-placement: after writing evidence/run.json with the real binding paths, after the own Execution is open and before launching its Tester, run node '~/projects/qa-skills/.claude/worktrees/evidence-0-14-0-a5bd77/scripts/probe-trust-core/inventory.mjs' '$TMPDIR/qa-trust-core-kezhIt' 'artifacts-before.txt'. This inventories ownRun, siblingRun and projectDir, plus the OS temp directory and the user's home directory (including .playwright-cli and similar dot directories). bounded inventory: temp/home depth 4; pruned probe state, .git, large caches (Library, .cache, .npm, host state including .claude except browser/playwright dirs, macOS com.apple.* temp dirs, node_modules); symlinks and unreadable dirs, deeper paths, modified existing files, transient files and other roots are blind spots; unrelated temp/home writes (not under a Run or the project, and not named like a browser or playwright directory) are ignored by name. After the own Tester returns and before execute ingest, run node '~/projects/qa-skills/.claude/worktrees/evidence-0-14-0-a5bd77/scripts/probe-trust-core/inventory.mjs' '$TMPDIR/qa-trust-core-kezhIt' 'artifacts-after.txt'. Run each inventory command as its own standalone Bash call, exactly as written, with no other command, variable or shell operator in that call. Each call saves the full inventory itself and prints only its path count and SHA-256; do not redirect, tee or print the saved file. Do not delete, move or edit any file, and keep run.json's ownRun and ownId exactly as the brief's binding marker states."
+  },
+  "metadata": {
+    "revision": "0.14.0 @ 0a68a48",
+    "claudeVersion": "",
+    "surface": "terminal CLI (local marketplace, distinct name)",
+    "os": "macOS 27.2.1",
+    "date": "2026-11-16"
+  }
+}

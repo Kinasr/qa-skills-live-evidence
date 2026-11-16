@@ -1,0 +1,10 @@
+{
+  "mode": "execute",
+  "action": "plan",
+  "ok": true,
+  "dir": "$TMPDIR/qa-skills-execute-DJWEYM",
+  "executions": 1,
+  "skipped": [],
+  "warnings": [],
+  "text": "Execute 1 case against local-ui (http://localhost:4200).\nSelection: tc_d68h3nc7 level:ui\nLevels:\n  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\nRoles → Access notes:\n  (no Role) → acc_local-observe\nData handling: configured credential sources are denied to the Tester.\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\nApplication data is not kept confidential.\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.14.0/docs/support.md#data-handling\nRun dir: $TMPDIR/qa-skills-execute-DJWEYM\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '$TMPDIR/qa-skills-execute-DJWEYM'"
+}
