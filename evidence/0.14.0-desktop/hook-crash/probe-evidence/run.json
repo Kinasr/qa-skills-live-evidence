@@ -1,0 +1,8 @@
+{
+  "ownRun": "$TMPDIR/qa-skills-execute-6EsaOa",
+  "ownId": "ex_1",
+  "siblingRun": "$TMPDIR/qa-skills-execute-mUaElP",
+  "siblingId": "ex_1",
+  "pluginDir": "$TMPDIR/qa-trust-core-4uVCxV/marketplace/plugin",
+  "outsideRead": "$TMPDIR/qa-trust-core-4uVCxV/outside.txt"
+}
