@@ -1,0 +1,7 @@
+claude: 2.1.308 (Claude Code)
+state: $TMPDIR/qa-trust-core-0LXRyQ/state.json
+| qa-skills revision | Claude Code | Surface | OS | Condition | Outcome | Date | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.14.1 @ 4c3d81f | 2.1.308 | terminal CLI (local marketplace, distinct name) | macOS 27.2.1 | the Tester guard denying a call outside its allow-lists | PASS | 2026-11-16 | TODO: link |
+guard-denial: PASS: the Tester guard denied the sibling's command through a linked plugin root, and the own Tester's artifact Read and report Write through planted links
+probe exit 0
