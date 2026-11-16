@@ -1,0 +1,164 @@
+{
+  "note": "Publishable extract of capture.json: tool calls and results only, e-mail addresses redacted. The verdict was graded from the full capture.",
+  "readErrors": [],
+  "files": {
+    "detection-agent.txt": "claude-code_2-1-325_agent\n",
+    "detection-execpath.txt": "~/Library/Application Support/Claude/claude-code/2.1.325/485fdac4332e/claude.app/Contents/MacOS/claude\n",
+    "detection-plan.json": "{\n  \"mode\": \"execute\",\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"$TMPDIR/qa-skills-execute-P78vN2\",\n  \"executions\": 1,\n  \"skipped\": [],\n  \"warnings\": [],\n  \"text\": \"Execute 1 case against local-ui (http://localhost:4200).\\nSelection: tc_d68h3nc7 level:ui\\nLevels:\\n  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\\nRoles → Access notes:\\n  (no Role) → acc_local-observe\\nData handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.14.0/docs/support.md#data-handling\\nRun dir: $TMPDIR/qa-skills-execute-P78vN2\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '$TMPDIR/qa-skills-execute-P78vN2'\"\n}\n",
+    "detection-version.json": "{\"exit\":0,\"stdout\":\"2.1.325 (Claude Code)\\n\",\"stderr\":\"\"}\n",
+    "project.json": "{\"projectDir\":\"~/projects/qa-skills-live-evidence\"}\n"
+  },
+  "parent": [
+    {
+      "use": "toolu_01Mzbpdrh7nnsrpgT1PDCqyR",
+      "tool": "mcp__ccd_turn__update_plan",
+      "input": {
+        "items": [
+          {
+            "content": "Record CLAUDE_CODE_EXECPATH",
+            "status": "in_progress"
+          },
+          {
+            "content": "Record execpath --version JSON",
+            "status": "pending"
+          },
+          {
+            "content": "Record AI_AGENT",
+            "status": "pending"
+          },
+          {
+            "content": "Run execute plan and save JSON",
+            "status": "pending"
+          },
+          {
+            "content": "Stop after plan and report",
+            "status": "pending"
+          }
+        ],
+        "scope": "first_task"
+      }
+    },
+    {
+      "result": "toolu_01Mzbpdrh7nnsrpgT1PDCqyR",
+      "is_error": false,
+      "content": "[{\"type\":\"text\",\"text\":\"Plan shown (5 steps).\"}]"
+    },
+    {
+      "use": "toolu_016KvRnBxzcs6Uwn3b5mm58j",
+      "tool": "Bash",
+      "input": {
+        "command": "printenv CLAUDE_CODE_EXECPATH",
+        "description": "Print CLAUDE_CODE_EXECPATH"
+      }
+    },
+    {
+      "use": "toolu_01SA4mddQtU7S124BfnS4t8F",
+      "tool": "Bash",
+      "input": {
+        "command": "node -e 'const p=process.env.CLAUDE_CODE_EXECPATH;const r=p&&require(\"node:path\").isAbsolute(p)?require(\"node:child_process\").spawnSync(p,[\"--version\"],{encoding:\"utf8\"}):{status:null,stdout:\"\",stderr:\"CLAUDE_CODE_EXECPATH is unset or not absolute\"};console.log(JSON.stringify({exit:r.status,stdout:r.stdout??\"\",stderr:r.stderr??\"\"}))'",
+        "description": "Run execpath --version and print JSON"
+      }
+    },
+    {
+      "use": "toolu_01CrJEEBktQYF4m4afoGGx89",
+      "tool": "Bash",
+      "input": {
+        "command": "printenv AI_AGENT",
+        "description": "Print AI_AGENT"
+      }
+    },
+    {
+      "use": "toolu_01GfRs56XEGKSFBXNDBxiPx3",
+      "tool": "Bash",
+      "input": {
+        "command": "node '~/.qa-runs/evidence-0.14.0/marketplace/plugin/scripts/scan.mjs' execute plan 'tc_d68h3nc7' 'level:ui'",
+        "description": "Run qa execute plan for the case"
+      }
+    },
+    {
+      "result": "toolu_016KvRnBxzcs6Uwn3b5mm58j",
+      "is_error": false,
+      "content": "~/Library/Application Support/Claude/claude-code/2.1.325/485fdac4332e/claude.app/Contents/MacOS/claude"
+    },
+    {
+      "result": "toolu_01SA4mddQtU7S124BfnS4t8F",
+      "is_error": false,
+      "content": "{\"exit\":0,\"stdout\":\"2.1.325 (Claude Code)\\n\",\"stderr\":\"\"}"
+    },
+    {
+      "result": "toolu_01CrJEEBktQYF4m4afoGGx89",
+      "is_error": false,
+      "content": "claude-code_2-1-325_agent"
+    },
+    {
+      "result": "toolu_01GfRs56XEGKSFBXNDBxiPx3",
+      "is_error": false,
+      "content": "{\n  \"mode\": \"execute\",\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"$TMPDIR/qa-skills-execute-P78vN2\",\n  \"executions\": 1,\n  \"skipped\": [],\n  \"warnings\": [],\n  \"text\": \"Execute 1 case against local-ui (http://localhost:4200).\\nSelection: tc_d68h3nc7 level:ui\\nLevels:\\n  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\\nRoles → Access notes:\\n  (no Role) → acc_local-observe\\nData handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.14.0/docs/support.md#data-handling\\nRun dir: $TMPDIR/qa-skills-execute-P78vN2\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '$TMPDIR/qa-skills-execute-P78vN2'\"\n}"
+    },
+    {
+      "use": "toolu_015JUPrMMj4vFyoED9J9zgxX",
+      "tool": "Write",
+      "input": {
+        "file_path": "$TMPDIR/qa-trust-core-TJSJCb/evidence/detection-execpath.txt",
+        "content": "~/Library/Application Support/Claude/claude-code/2.1.325/485fdac4332e/claude.app/Contents/MacOS/claude\n"
+      }
+    },
+    {
+      "use": "toolu_019Lq4HJLLRKk2U48F52bNPL",
+      "tool": "Write",
+      "input": {
+        "file_path": "$TMPDIR/qa-trust-core-TJSJCb/evidence/detection-version.json",
+        "content": "{\"exit\":0,\"stdout\":\"2.1.325 (Claude Code)\\n\",\"stderr\":\"\"}\n"
+      }
+    },
+    {
+      "use": "toolu_01ADJ9bwSwntJnhSP59eeCCV",
+      "tool": "Write",
+      "input": {
+        "file_path": "$TMPDIR/qa-trust-core-TJSJCb/evidence/detection-agent.txt",
+        "content": "claude-code_2-1-325_agent\n"
+      }
+    },
+    {
+      "use": "toolu_01XgBYmrmafHCXudRuH8dYoK",
+      "tool": "Write",
+      "input": {
+        "file_path": "$TMPDIR/qa-trust-core-TJSJCb/evidence/detection-plan.json",
+        "content": "{\n  \"mode\": \"execute\",\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"$TMPDIR/qa-skills-execute-P78vN2\",\n  \"executions\": 1,\n  \"skipped\": [],\n  \"warnings\": [],\n  \"text\": \"Execute 1 case against local-ui (http://localhost:4200).\\nSelection: tc_d68h3nc7 level:ui\\nLevels:\\n  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\\nRoles → Access notes:\\n  (no Role) → acc_local-observe\\nData handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.14.0/docs/support.md#data-handling\\nRun dir: $TMPDIR/qa-skills-execute-P78vN2\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '$TMPDIR/qa-skills-execute-P78vN2'\"\n}\n"
+      }
+    },
+    {
+      "result": "toolu_015JUPrMMj4vFyoED9J9zgxX",
+      "is_error": false,
+      "content": "File created successfully at: $TMPDIR/qa-trust-core-TJSJCb/evidence/detection-execpath.txt (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "result": "toolu_019Lq4HJLLRKk2U48F52bNPL",
+      "is_error": false,
+      "content": "File created successfully at: $TMPDIR/qa-trust-core-TJSJCb/evidence/detection-version.json (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "result": "toolu_01ADJ9bwSwntJnhSP59eeCCV",
+      "is_error": false,
+      "content": "File created successfully at: $TMPDIR/qa-trust-core-TJSJCb/evidence/detection-agent.txt (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "result": "toolu_01XgBYmrmafHCXudRuH8dYoK",
+      "is_error": false,
+      "content": "File created successfully at: $TMPDIR/qa-trust-core-TJSJCb/evidence/detection-plan.json (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "use": "toolu_01LX35KAEbKhJhn8uB7LT7yo",
+      "tool": "mcp__ccd_turn__wrap_up",
+      "input": {
+        "recap": "You now have the four detection observations saved in the evidence folder. The plan came back ok with 1 Execution, nothing skipped and no Unguarded Run offer. As your detection setup says, I stopped there: nothing was confirmed, opened, briefed, launched or ingested."
+      }
+    },
+    {
+      "result": "toolu_01LX35KAEbKhJhn8uB7LT7yo",
+      "is_error": false,
+      "content": "[{\"type\":\"text\",\"text\":\"Nothing is pending, so the app draws no box; the recap is the session's status. Your closing message is your answer to the user: write it now, as the last thing you say this turn.\"}]"
+    }
+  ],
+  "children": {}
+}

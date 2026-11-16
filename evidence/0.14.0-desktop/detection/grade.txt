@@ -1,0 +1,4 @@
+| qa-skills revision | Claude Code | Surface | OS | Condition | Outcome | Date | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.14.0 @ 0a68a48 | 2.1.325 | desktop app (local marketplace, distinct name) | macOS 27.2.1 | host-version detection working on the floor version | PASS | 2026-11-16 | TODO: link |
+detection: PASS: host-version detection worked above the floor 2.1.308: CLAUDE_CODE_EXECPATH "~/Library/Application Support/Claude/claude-code/2.1.325/485fdac4332e/claude.app/Contents/MacOS/claude" (absolute); --version answer "2.1.325 (Claude Code)"; AI_AGENT "claude-code_2-1-325_agent"; route guarded admission

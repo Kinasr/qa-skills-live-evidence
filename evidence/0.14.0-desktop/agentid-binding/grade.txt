@@ -1,0 +1,4 @@
+| qa-skills revision | Claude Code | Surface | OS | Condition | Outcome | Date | Evidence |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 0.14.0 @ 0a68a48 | 2.1.325 | desktop app (local marketplace, distinct name) | macOS 27.2.1 | a background-launched Tester binding to its Execution (`agentId`) | PASS | 2026-11-16 | TODO: link |
+agentid-binding: PASS: background agentId matches tester.json; the own Tester's commands were admitted and the intruder's, bound to the own Execution, were denied on the sibling
