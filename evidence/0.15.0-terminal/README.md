@@ -8,8 +8,8 @@
 | --- | --- | --- |
 | Host-version detection | PASS | detection |
 | agentId binding | PASS | agentid-binding |
-| Guard denial | INCONCLUSIVE x3 (see below) | guard-denial-inconclusive |
-| Artifact placement | INCONCLUSIVE x2 (see below) | artifact-placement-inconclusive |
+| Guard denial | PASS (rerun after #1146 harness fix; earlier INCONCLUSIVE x3 kept in guard-denial-inconclusive) | guard-denial |
+| Artifact placement | PASS (rerun after #1146 harness fix; earlier INCONCLUSIVE x2 kept in artifact-placement-inconclusive) | artifact-placement |
 | End-to-end /qa-execute Run dpdj22g3 | PASSED (tc_d68h3nc7, ui) | e2e-run |
 | migration field, refusal shape | PASS | cli-checks |
 | `delegate next` in retry cooldown: `wait_ms` 13899, `next_ready_at`, no dispatch, 0.115s | PASS | cli-checks |
@@ -18,4 +18,4 @@
 
 Not exercised: hook crash and timeout faulted copies; `/qa-codefix` scope tokens.
 
-Guard denial: three runs, all INCONCLUSIVE. Run 1: planted links not captured. Runs 2 and 3: "the parent plant.mjs execution was not captured", although the transcript shows the parent running plant.mjs. Placement: both runs saw 103 browser files, all under the own and sibling Execution dirs, then stopped on `missing: .../executions/ex_1/tester.json (ENOENT)` for the idle sibling. Neither counts as PASS or FAIL.
+After `#1146` (`4d03453f`) fixed the idle-sibling `tester.json` read error in `runner.mjs` and the `guard-denial` setup in `guard-denial.mjs` / `plant.mjs`, both `guard-denial` and `artifact-placement` passed against `0.15.0 @ f1a25ff` on Claude Code `2.1.308`. The earlier inconclusive runs (`guard-denial-inconclusive` and `artifact-placement-inconclusive`) are kept as historical rerun records.
