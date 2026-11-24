@@ -1,0 +1,45 @@
+{
+  "mode": "execute",
+  "migration": {
+    "pending": false,
+    "count": 0,
+    "declarations": [],
+    "migrations": []
+  },
+  "action": "plan",
+  "ok": true,
+  "dir": "$TMPDIR/qa-skills-execute-pEC1LV",
+  "executions": 1,
+  "sections": [
+    {
+      "id": "summary",
+      "markdown": "Execute 1 case against local-ui (http://localhost:4200).",
+      "label": "Execution plan"
+    },
+    {
+      "id": "selection",
+      "markdown": "tc_d68h3nc7 level:ui",
+      "label": "Selection"
+    },
+    {
+      "id": "levels",
+      "markdown": "  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)",
+      "label": "Levels"
+    },
+    {
+      "id": "access",
+      "markdown": "Roles → Access notes:\n  (no Role) → acc_local-observe",
+      "label": "Roles → Access notes"
+    },
+    {
+      "id": "data_handling",
+      "markdown": "Data handling: configured credential sources are denied to the Tester.\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\nApplication data is not kept confidential.\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.15.0/docs/support.md#data-handling",
+      "label": "Data handling"
+    },
+    {
+      "id": "run_dir",
+      "markdown": "Run dir: $TMPDIR/qa-skills-execute-pEC1LV\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '$TMPDIR/qa-skills-execute-pEC1LV'",
+      "label": "Run directory"
+    }
+  ]
+}

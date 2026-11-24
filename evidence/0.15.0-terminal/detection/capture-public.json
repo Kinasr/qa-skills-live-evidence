@@ -1,0 +1,118 @@
+{
+  "note": "Publishable extract of capture.json: tool calls and results only, e-mail addresses redacted. The verdict was graded from the full capture.",
+  "readErrors": [],
+  "files": {
+    "detection-agent.txt": "claude-code_2-1-308_agent\n",
+    "detection-execpath.txt": "~/.qa-runs/evidence-0.13.1/cc308/node_modules/@anthropic-ai/claude-code/bin/claude.exe\n",
+    "detection-plan.json": "{\n  \"mode\": \"execute\",\n  \"migration\": {\n    \"pending\": false,\n    \"count\": 0,\n    \"declarations\": [],\n    \"migrations\": []\n  },\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"$TMPDIR/qa-skills-execute-pEC1LV\",\n  \"executions\": 1,\n  \"sections\": [\n    {\n      \"id\": \"summary\",\n      \"markdown\": \"Execute 1 case against local-ui (http://localhost:4200).\",\n      \"label\": \"Execution plan\"\n    },\n    {\n      \"id\": \"selection\",\n      \"markdown\": \"tc_d68h3nc7 level:ui\",\n      \"label\": \"Selection\"\n    },\n    {\n      \"id\": \"levels\",\n      \"markdown\": \"  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\",\n      \"label\": \"Levels\"\n    },\n    {\n      \"id\": \"access\",\n      \"markdown\": \"Roles → Access notes:\\n  (no Role) → acc_local-observe\",\n      \"label\": \"Roles → Access notes\"\n    },\n    {\n      \"id\": \"data_handling\",\n      \"markdown\": \"Data handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.15.0/docs/support.md#data-handling\",\n      \"label\": \"Data handling\"\n    },\n    {\n      \"id\": \"run_dir\",\n      \"markdown\": \"Run dir: $TMPDIR/qa-skills-execute-pEC1LV\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '$TMPDIR/qa-skills-execute-pEC1LV'\",\n      \"label\": \"Run directory\"\n    }\n  ]\n}\n",
+    "detection-version.json": "{\"exit\":0,\"stdout\":\"2.1.308 (Claude Code)\\n\",\"stderr\":\"\"}\n",
+    "project.json": "{\"projectDir\":\"~/projects/qa-skills-live-evidence\"}\n"
+  },
+  "parent": [
+    {
+      "use": "toolu_01LpbzZQKNHjRFTjUdrcnybU",
+      "tool": "Bash",
+      "input": {
+        "command": "printenv CLAUDE_CODE_EXECPATH",
+        "description": "Read the host executable path variable"
+      }
+    },
+    {
+      "result": "toolu_01LpbzZQKNHjRFTjUdrcnybU",
+      "is_error": false,
+      "content": "~/.qa-runs/evidence-0.13.1/cc308/node_modules/@anthropic-ai/claude-code/bin/claude.exe"
+    },
+    {
+      "use": "toolu_01T9E7Eq6m2Es3JZ2oSpxD1K",
+      "tool": "Bash",
+      "input": {
+        "command": "node -e 'const p=process.env.CLAUDE_CODE_EXECPATH;const r=p&&require(\"node:path\").isAbsolute(p)?require(\"node:child_process\").spawnSync(p,[\"--version\"],{encoding:\"utf8\"}):{status:null,stdout:\"\",stderr:\"CLAUDE_CODE_EXECPATH is unset or not absolute\"};console.log(JSON.stringify({exit:r.status,stdout:r.stdout??\"\",stderr:r.stderr??\"\"}))'",
+        "description": "Query the host executable version as JSON"
+      }
+    },
+    {
+      "use": "toolu_019iZErE67hcpFMKGGPiLcwU",
+      "tool": "Bash",
+      "input": {
+        "command": "printenv AI_AGENT",
+        "description": "Read the agent identification variable"
+      }
+    },
+    {
+      "result": "toolu_01T9E7Eq6m2Es3JZ2oSpxD1K",
+      "is_error": false,
+      "content": "{\"exit\":0,\"stdout\":\"2.1.308 (Claude Code)\\n\",\"stderr\":\"\"}"
+    },
+    {
+      "result": "toolu_019iZErE67hcpFMKGGPiLcwU",
+      "is_error": false,
+      "content": "claude-code_2-1-308_agent"
+    },
+    {
+      "use": "toolu_01KHijQwrXudf1PT4CUYpusU",
+      "tool": "Bash",
+      "input": {
+        "command": "node '~/.qa-runs/evidence-0.15.0/marketplace/plugin/scripts/scan.mjs' execute plan 'tc_d68h3nc7' 'level:ui'",
+        "description": "Plan the execute Run for the case"
+      }
+    },
+    {
+      "result": "toolu_01KHijQwrXudf1PT4CUYpusU",
+      "is_error": false,
+      "content": "{\n  \"mode\": \"execute\",\n  \"migration\": {\n    \"pending\": false,\n    \"count\": 0,\n    \"declarations\": [],\n    \"migrations\": []\n  },\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"$TMPDIR/qa-skills-execute-pEC1LV\",\n  \"executions\": 1,\n  \"sections\": [\n    {\n      \"id\": \"summary\",\n      \"markdown\": \"Execute 1 case against local-ui (http://localhost:4200).\",\n      \"label\": \"Execution plan\"\n    },\n    {\n      \"id\": \"selection\",\n      \"markdown\": \"tc_d68h3nc7 level:ui\",\n      \"label\": \"Selection\"\n    },\n    {\n      \"id\": \"levels\",\n      \"markdown\": \"  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\",\n      \"label\": \"Levels\"\n    },\n    {\n      \"id\": \"access\",\n      \"markdown\": \"Roles → Access notes:\\n  (no Role) → acc_local-observe\",\n      \"label\": \"Roles → Access notes\"\n    },\n    {\n      \"id\": \"data_handling\",\n      \"markdown\": \"Data handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.15.0/docs/support.md#data-handling\",\n      \"label\": \"Data handling\"\n    },\n    {\n      \"id\": \"run_dir\",\n      \"markdown\": \"Run dir: $TMPDIR/qa-skills-execute-pEC1LV\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '$TMPDIR/qa-skills-execute-pEC1LV'\",\n      \"label\": \"Run directory\"\n    }\n  ]\n}"
+    },
+    {
+      "use": "toolu_01FWYWefnCX53mC4NLsmRYgL",
+      "tool": "Write",
+      "input": {
+        "file_path": "$TMPDIR/qa-trust-core-vGN6LP/evidence/detection-execpath.txt",
+        "content": "~/.qa-runs/evidence-0.13.1/cc308/node_modules/@anthropic-ai/claude-code/bin/claude.exe\n"
+      }
+    },
+    {
+      "result": "toolu_01FWYWefnCX53mC4NLsmRYgL",
+      "is_error": false,
+      "content": "File created successfully at: $TMPDIR/qa-trust-core-vGN6LP/evidence/detection-execpath.txt (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "use": "toolu_01YGYksoA1VGdbiAFTHKPj2u",
+      "tool": "Write",
+      "input": {
+        "file_path": "$TMPDIR/qa-trust-core-vGN6LP/evidence/detection-version.json",
+        "content": "{\"exit\":0,\"stdout\":\"2.1.308 (Claude Code)\\n\",\"stderr\":\"\"}\n"
+      }
+    },
+    {
+      "result": "toolu_01YGYksoA1VGdbiAFTHKPj2u",
+      "is_error": false,
+      "content": "File created successfully at: $TMPDIR/qa-trust-core-vGN6LP/evidence/detection-version.json (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "use": "toolu_01UvFHxygzn7KC1Hk7r5dvej",
+      "tool": "Write",
+      "input": {
+        "file_path": "$TMPDIR/qa-trust-core-vGN6LP/evidence/detection-agent.txt",
+        "content": "claude-code_2-1-308_agent\n"
+      }
+    },
+    {
+      "result": "toolu_01UvFHxygzn7KC1Hk7r5dvej",
+      "is_error": false,
+      "content": "File created successfully at: $TMPDIR/qa-trust-core-vGN6LP/evidence/detection-agent.txt (file state is current in your context — no need to Read it back)"
+    },
+    {
+      "use": "toolu_01RmAjRMahVPt7rcYuFihdPZ",
+      "tool": "Write",
+      "input": {
+        "file_path": "$TMPDIR/qa-trust-core-vGN6LP/evidence/detection-plan.json",
+        "content": "{\n  \"mode\": \"execute\",\n  \"migration\": {\n    \"pending\": false,\n    \"count\": 0,\n    \"declarations\": [],\n    \"migrations\": []\n  },\n  \"action\": \"plan\",\n  \"ok\": true,\n  \"dir\": \"$TMPDIR/qa-skills-execute-pEC1LV\",\n  \"executions\": 1,\n  \"sections\": [\n    {\n      \"id\": \"summary\",\n      \"markdown\": \"Execute 1 case against local-ui (http://localhost:4200).\",\n      \"label\": \"Execution plan\"\n    },\n    {\n      \"id\": \"selection\",\n      \"markdown\": \"tc_d68h3nc7 level:ui\",\n      \"label\": \"Selection\"\n    },\n    {\n      \"id\": \"levels\",\n      \"markdown\": \"  tc_d68h3nc7: bound (none); selected ui; executed ui; omitted (none)\",\n      \"label\": \"Levels\"\n    },\n    {\n      \"id\": \"access\",\n      \"markdown\": \"Roles → Access notes:\\n  (no Role) → acc_local-observe\",\n      \"label\": \"Roles → Access notes\"\n    },\n    {\n      \"id\": \"data_handling\",\n      \"markdown\": \"Data handling: configured credential sources are denied to the Tester.\\nRecognised credential patterns are scrubbed from command output, saved responses and guard logs.\\nApplication data is not kept confidential.\\nUse non-production targets with test accounts; entities the Tester creates are left for you to clean up.\\nDetails: https://github.com/Kinasr/qa-skills/blob/v0.15.0/docs/support.md#data-handling\",\n      \"label\": \"Data handling\"\n    },\n    {\n      \"id\": \"run_dir\",\n      \"markdown\": \"Run dir: $TMPDIR/qa-skills-execute-pEC1LV\\nWhen the Run is over: node <plugin>/scripts/scan.mjs execute ingest --dir '$TMPDIR/qa-skills-execute-pEC1LV'\",\n      \"label\": \"Run directory\"\n    }\n  ]\n}\n"
+      }
+    },
+    {
+      "result": "toolu_01RmAjRMahVPt7rcYuFihdPZ",
+      "is_error": false,
+      "content": "File created successfully at: $TMPDIR/qa-trust-core-vGN6LP/evidence/detection-plan.json (file state is current in your context — no need to Read it back)"
+    }
+  ],
+  "children": {}
+}

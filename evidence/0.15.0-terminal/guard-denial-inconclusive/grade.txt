@@ -1,0 +1,5 @@
+claude: 2.1.308 (Claude Code)
+state: $TMPDIR/qa-trust-core-YWqwXf/state.json
+INCONCLUSIVE (rerun, not counted): the Tester guard denying a call outside its allow-lists: the parent plant.mjs execution was not captured
+guard-denial: INCONCLUSIVE: the parent plant.mjs execution was not captured
+probe exit 1

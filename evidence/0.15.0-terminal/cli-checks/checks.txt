@@ -1,0 +1,66 @@
+# 0.15.0 CLI behaviour checks (scan.mjs from the installed plugin root, 2026-11-24)
+
+## migration field in an entry command (execute plan)
+{
+ "migration": {
+  "pending": false,
+  "count": 0,
+  "declarations": [],
+  "migrations": []
+ },
+ "ok": true
+}
+
+## refusal shape {code, ...facts}: missing run dir
+{
+  "mode": "execute",
+  "ok": false,
+  "refusals": [
+    {
+      "code": "usage_error",
+      "reason": "no run dir at /nonexistent: run `execute plan` first"
+    }
+  ]
+}
+
+## refusal shape: unknown mode (usage text trimmed)
+{
+ "mode": "bogus",
+ "ok": false,
+ "refusals": [
+  {
+   "code": "unknown_mode",
+   "mode": "bogus",
+   "usage": "usage: scan.mjs check-file <path> [--input <path>] [--root <..."
+  }
+ ]
+}
+
+## delegate next, every unit in retry cooldown (impact run, 6 units; each recorded `--status timeout`; called at 2026-11-24T10:09:11Z, cooldown ends 10:09:25Z)
+dispatch [] and in_flight [] : nothing launched; returns at once (0.115s total).
+{
+  "mode": "delegate",
+  "action": "next",
+  "ok": true,
+  "run": "50x6mfj3",
+  "done": false,
+  "dispatch": [],
+  "in_flight": [],
+  "wait_ms": 13899,
+  "next_ready_at": "2026-11-24T10:09:25.781Z"
+}
+node $S delegate next --dir $D  0.11s user 0.02s system 115% cpu 0.115 total
+
+## execute next, retry cooldown (1 Execution ex_1: `execute record --status timeout` -> settled "queued", retry true; called at 10:09:27Z)
+{
+  "mode": "execute",
+  "action": "next",
+  "ok": true,
+  "start": [],
+  "done": false,
+  "in_flight": 0,
+  "wait_ms": 14826,
+  "next_ready_at": "2026-11-24T10:09:42.182Z",
+  "sections": []
+}
+node $S execute next --dir $D  0.13s user 0.04s system 98% cpu 0.170 total
